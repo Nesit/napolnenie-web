@@ -11,6 +11,11 @@ ru:
         few: Наши клиенты
         many: Наши клиенты
         other: Наши клиенты
+      review:
+        one: Отзыв
+        few: Отзовы
+        many: Отзовы
+        other: Отзовы
     attributes:
       admin_user:
         email: Email
@@ -23,3 +28,8 @@ ru:
         title: Название
         logo: Логотип
         created_at: Дата создания
+      review:
+        company_name: Название компании
+        author: Автор
+        text: Текст
+        create_date: Дата создания
