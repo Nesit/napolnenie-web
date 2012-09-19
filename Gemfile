@@ -11,6 +11,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'paperclip'
+gem 'activeadmin'
+gem 'russian'
 gem 'unicorn'
 
 group :development do

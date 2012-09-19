@@ -1,0 +1,25 @@
+ru:
+  activerecord:
+    models:
+      admin_user:
+        one: Администратор
+        few: Администраторы
+        many: Администраторы
+        other: Администраторы
+      our_client:
+        one: Наш клиент
+        few: Наши клиенты
+        many: Наши клиенты
+        other: Наши клиенты
+    attributes:
+      admin_user:
+        email: Email
+        current_sign_in_at: Текущие время захода
+        last_sign_in_at: Последние время захода
+        sign_in_count: Количетсво заходов
+        password: Пароль
+        password_confirmation: Повторите пароль
+      our_client:
+        title: Название
+        logo: Логотип
+        created_at: Дата создания
