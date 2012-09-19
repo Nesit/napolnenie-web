@@ -14,6 +14,5 @@ gem 'jquery-rails'
 gem 'unicorn'
 
 group :development do
-  gem 'debugger'
   gem 'thin'
 end
