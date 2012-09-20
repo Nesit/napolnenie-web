@@ -1,0 +1,18 @@
+<%= semantic_form_for [:admin, @page], html: { multipart: true } do |f| %>
+  <%= f.inputs 'Основное' do %>
+    <%= f.input :permalink %>
+    <%= f.input :text1 %>
+  <% end %>
+
+  <%= f.inputs "Фото в слайдере" do %>
+    <% f.object.slider_photos.each do |photo| %>
+      <div class="photo">
+	<%= link_to image_tag(photo.image), photo.image.url(:original) %>
+	<%= link_to 'Убрать', '', :class => 'remove_slider_photo', 'data-id' => photo.id %>
+      </div>
+    <% end %>
+    <input type="file" name="page[slider_photos_attributes][][image]" multiple="multiple" accept="image"/>
+  <% end %>
+
+  <%= f.actions %>
+<% end %>

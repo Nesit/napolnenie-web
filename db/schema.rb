@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919112525) do
+ActiveRecord::Schema.define(:version => 20120919123010) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(:version => 20120919112525) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "pages", :force => true do |t|
+    t.string   "permalink"
+    t.text     "text1"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "reviews", :force => true do |t|
     t.string   "company_name"
     t.string   "author"
@@ -63,6 +70,16 @@ ActiveRecord::Schema.define(:version => 20120919112525) do
     t.date     "create_date"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "slider_photos", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "page_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end

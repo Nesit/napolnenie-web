@@ -18,4 +18,6 @@ gem 'unicorn'
 
 group :development do
   gem 'thin'
+  gem 'debugger'
+  gem 'sextant'
 end

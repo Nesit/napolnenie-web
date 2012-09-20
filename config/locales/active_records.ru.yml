@@ -1,6 +1,11 @@
 ru:
   activerecord:
     models:
+      page:
+        one: Страница
+        few: Страници
+        many: Страници
+        other: Страници
       admin_user:
         one: Администратор
         few: Администраторы
@@ -33,3 +38,6 @@ ru:
         author: Автор
         text: Текст
         create_date: Дата создания
+      page:
+        permalink: Адресс страницы
+        text1: Главный текст
