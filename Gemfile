@@ -15,6 +15,7 @@ gem 'paperclip'
 gem 'activeadmin'
 gem 'russian'
 gem 'unicorn'
+gem 'ffaker'
 
 group :development do
   gem 'thin'

@@ -1,7 +1,7 @@
 class SliderPhoto < ActiveRecord::Base
-  attr_accessible :image, :page_id
+  attr_accessible :image, :static_page_id
 
-  belongs_to :page
+  belongs_to :static_page
 
   has_attached_file :image, styles: { medium: "300x300", thumb: "125x125" },
                             path: ":rails_root/public/system/slider_photo/:attachment/:id/:style/:filename",

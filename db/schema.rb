@@ -56,13 +56,6 @@ ActiveRecord::Schema.define(:version => 20120919123010) do
     t.datetime "updated_at",        :null => false
   end
 
-  create_table "pages", :force => true do |t|
-    t.string   "permalink"
-    t.text     "text1"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "reviews", :force => true do |t|
     t.string   "company_name"
     t.string   "author"
@@ -77,9 +70,16 @@ ActiveRecord::Schema.define(:version => 20120919123010) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "page_id"
+    t.integer  "static_page_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "static_pages", :force => true do |t|
+    t.string   "permalink"
+    t.text     "text1"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
