@@ -16,10 +16,12 @@ gem 'activeadmin'
 gem 'russian'
 gem 'unicorn'
 gem 'ffaker'
+gem 'will_paginate'
 
 group :development do
   gem 'sqlite3'
   gem 'thin'
   gem 'debugger'
   gem 'sextant'
+  gem 'debugger'
 end

@@ -10,5 +10,6 @@ NapolnenieWeb::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  match "/reviews" => "reviews#show"
   root :to => 'main#index'
 end
