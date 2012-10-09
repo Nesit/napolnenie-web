@@ -18,6 +18,7 @@ gem 'unicorn'
 gem 'ffaker'
 
 group :development do
+  gem 'sqlite3'
   gem 'thin'
   gem 'debugger'
   gem 'sextant'

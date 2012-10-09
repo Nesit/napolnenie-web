@@ -1,0 +1,7 @@
+<% 100.times.each do |i| %>
+review_<%= i %>:
+  company_name: <%= Faker::Lorem.words.join(' ') %>
+  author: <%= Faker::Name.name %>
+  text: <%= Faker::Lorem.words(400) %>
+  create_date: <%= Time.zone.now.to_date - rand(999).days %>
+<% end %>

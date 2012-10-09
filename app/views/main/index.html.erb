@@ -6,15 +6,15 @@
       <br>
       <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
       <br>
-      <img src="img/learn.png">
+      <img src="assets/learn.png">
     </div>
     <div class="na-slider">
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-	<img src="img/slide1.png" alt="">
-	<img src="img/slide2.png" alt="">
-	<img src="img/slide3.png" alt="">
+	<% StaticPage.find_page(:main).slider_photos.each do |photo| %>
+	  <%= image_tag(photo.image.url) %>
+	<% end %>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -115,9 +115,9 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-	<img src="img/slide1.png" alt="">
-	<img src="img/slide2.png" alt="">
-	<img src="img/slide3.png" alt="">
+	<% OurClient.all.each do |client| %>
+	  <%= image_tag client.logo %>
+	<% end %>
       </div>
     </div>
   </section>

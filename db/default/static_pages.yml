@@ -1,2 +1,14 @@
 main_page:
-  permalink: "main"
+  permalink: main
+
+services:
+  permalink: services
+
+clients:
+  permalink: clients
+
+payments:
+  permalink: payments
+
+contacts:
+  permalink: contacts
