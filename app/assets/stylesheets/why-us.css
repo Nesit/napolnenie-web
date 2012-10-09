@@ -52,7 +52,7 @@
 
       #why-us .na-forms .na-button.na-order
       {
-        background-image: url(../img/form-order.png);
+        background-image: url(/assets//form-order.png);
       }
         #why-us .na-forms .na-button.na-order .na-hint
         {
@@ -60,12 +60,12 @@
           left: -130px;
           padding-top: 100px;
           color: #1b98bb;
-          background-image: url(../img/hint-blue.png);
+          background-image: url(/assets//hint-blue.png);
         }
 
       #why-us .na-forms .na-button.na-audit
       {
-        background-image: url(../img/form-audit.png);
+        background-image: url(/assets//form-audit.png);
       }          
         #why-us .na-forms .na-button.na-audit .na-hint
         {
@@ -73,7 +73,7 @@
           right: -130px;
           padding-top: 90px;
           color: #aa1f27;
-          background-image: url(../img/hint-red.png);
+          background-image: url(/assets//hint-red.png);
         }
 
       #why-us .na-forms .na-form
@@ -105,12 +105,12 @@
           }
             #why-us .na-form .na-button.na-audit
             {
-              background-image: url(../img/form-audit-small.png);
+              background-image: url(/assets//form-audit-small.png);
             }
 
             #why-us .na-form .na-button.na-order
             {
-              background-image: url(../img/form-order-small.png);
+              background-image: url(/assets//form-order-small.png);
             }
 
           #why-us .na-forms .na-form .na-inner form 
@@ -133,7 +133,7 @@
                 padding: 7px 7px 5px;
                 font: normal 90% 'Elektra Light Pro';
                 color: #fff;
-                background: transparent url(../img/input-bg.png) center center;
+                background: transparent url(/assets//input-bg.png) center center;
                 border: 1px solid #fff;
               }
                 #why-us .na-forms .na-form .na-inner form textarea

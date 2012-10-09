@@ -50,7 +50,7 @@
   }
   #service .na-parallax.back 
   {
-    background-image: url(../img/service-parallax-back.png);
+    background-image: url(/assets//service-parallax-back.png);
   }
 
   #service .na-cover
@@ -61,13 +61,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(../img/circle-bg.png);
+    background: url(/assets//circle-bg.png);
   }
 
   #service .na-parallax.front 
   {
     z-index: 3;
-    background-image: url(../img/service-parallax-front.png);
+    background-image: url(/assets//service-parallax-front.png);
   }
 
   #service nav 
@@ -183,7 +183,7 @@
         text-align: left;
         font: normal 50% Arial, Helvetica, sans-serif;
         color: #999;
-        background: url(../img/hint.png) no-repeat;
+        background: url(/assets//hint.png) no-repeat;
       }
         #service nav .na-item:hover .na-hint
         {
