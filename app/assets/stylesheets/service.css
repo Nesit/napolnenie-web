@@ -1,0 +1,191 @@
+#service header 
+{
+  margin: 0 auto;  
+  padding-left: 25px;
+  width: 975px;    
+}
+  #service .na-parallax-wrapper 
+  {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    height: 620px;
+    background: #fcfcfc;
+  }
+    #service .na-parallax-wrapper .na-shadow-top,
+    #service .na-parallax-wrapper .na-shadow-bottom
+    {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      border-style: solid;
+      border-color: #c8c8c8;
+    }
+      #service .na-parallax-wrapper .na-shadow-top
+      {
+        border-width: 1px 0 0;
+      }
+
+      #service .na-parallax-wrapper .na-shadow-bottom
+      {
+        bottom: 0;
+        border-width: 0 0 1px;
+      }
+        #service .na-parallax-wrapper .na-shadow-bottom .na-shadow div
+        {
+          margin-top: 0;
+          margin-bottom: -8px;
+        }
+
+  #service .na-parallax
+  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  #service .na-parallax.back 
+  {
+    background-image: url(../img/service-parallax-back.png);
+  }
+
+  #service .na-cover
+  {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/circle-bg.png);
+  }
+
+  #service .na-parallax.front 
+  {
+    z-index: 3;
+    background-image: url(../img/service-parallax-front.png);
+  }
+
+  #service nav 
+  {
+    position: relative;
+    z-index: 4;
+    margin-top: 150px;
+    text-align: center;
+    font: normal 200% "Elektra Light Pro Bold";
+    color: #616765;
+  }
+    #service nav .na-item 
+    {
+      position: relative;
+      display: inline-table;
+      vertical-align: top;
+      margin-right: 100px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255,255,255,.85);
+      border: 1px solid #c8c8c8;
+      border-radius: 150px;
+    }
+      #service nav .na-item:last-child 
+      {
+        margin-right: 0;
+      }
+        #service nav .na-item > span 
+        {
+          display: table-cell;
+          vertical-align: middle;
+          text-transform: uppercase;
+        }
+          #service nav .na-item.seo > span 
+          {
+            font-size: 300%;
+          }
+            #service nav .na-item.seo.active > span
+            {
+              font-size: 200%;
+            }
+
+          #service nav .na-item.content > span
+          {
+            font-size: 100%;
+          }
+            #service nav .na-item.content.active > span
+            {
+              font-size: 80%;
+            }
+
+          #service nav .na-item.press > span
+          {
+            font-size: 120%;
+          }
+            #service nav .na-item.press.active > span
+            {
+              font-size: 100%;
+            }
+
+        #service nav .na-item a
+        {
+          display: none;
+          position: absolute;
+          bottom: 0;
+          box-sizing: border-box;
+          width: 210px;
+          height: 210px;
+          padding: 0 10px;
+          text-transform: uppercase;
+          background-color: rgba(255,255,255,.85);
+          border: 1px solid #c8c8c8;
+          border-radius: 105px;          
+        }
+
+      #service nav .na-item.active 
+      {
+        width: 210px;
+        height: 210px;
+      }
+        #service nav .na-item.active a 
+        {
+          display: table;
+          position: absolute;
+          bottom: -200px;
+          line-height: normal;
+          font-size: 90%;
+          text-decoration: none;
+          color: #616765;
+        }
+          #service nav .na-item.active a.circle-left  { left : -115px }
+          #service nav .na-item.active a.circle-right { right: -115px }
+
+          #service nav .na-item.active a span 
+          {
+            display: table-cell;
+            vertical-align: middle;
+            line-height: normal;
+          }
+
+      #service nav .na-item .na-hint
+      {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: -80px;
+        left: -100px;
+        box-sizing: border-box;
+        width: 217px;
+        height: 217px;
+        padding: 50px 30px 50px 45px;
+        line-height: normal;
+        text-align: left;
+        font: normal 50% Arial, Helvetica, sans-serif;
+        color: #999;
+        background: url(../img/hint.png) no-repeat;
+      }
+        #service nav .na-item:hover .na-hint
+        {
+          display: block;
+        }

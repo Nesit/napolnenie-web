@@ -1,0 +1,184 @@
+#why-us
+{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  width: 975px;    
+}
+  #why-us .na-text 
+  {
+    margin-left: 25px;
+    font: normal 140% 'Elektra Light Pro';
+  }  
+    #why-us .na-text  span 
+    {
+      color: #cc463f;
+    }
+      #why-us .na-text  span span 
+      {
+        text-decoration: underline;
+      }
+
+  #why-us .na-forms
+  {
+    margin-top: 45px;
+    font-size: 150%;
+  }
+    #why-us .na-forms .na-button
+    {
+      position: relative;
+      width: 374px;
+      height: 374px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+      #why-us .na-forms .na-button .na-hint 
+      {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+        width: 238px;
+        height: 238px;
+        text-align: center;
+        font-size: 125%;
+        background-repeat: no-repeat;
+      }
+        #why-us .na-forms .na-button:hover .na-hint 
+        {
+          display: block;
+        }
+
+      #why-us .na-forms .na-button.na-order
+      {
+        background-image: url(../img/form-order.png);
+      }
+        #why-us .na-forms .na-button.na-order .na-hint
+        {
+          top: -70px;
+          left: -130px;
+          padding-top: 100px;
+          color: #1b98bb;
+          background-image: url(../img/hint-blue.png);
+        }
+
+      #why-us .na-forms .na-button.na-audit
+      {
+        background-image: url(../img/form-audit.png);
+      }          
+        #why-us .na-forms .na-button.na-audit .na-hint
+        {
+          top: -70px;
+          right: -130px;
+          padding-top: 90px;
+          color: #aa1f27;
+          background-image: url(../img/hint-red.png);
+        }
+
+      #why-us .na-forms .na-form
+      {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 380px;
+        background-color: #1b98bb;
+      }          
+        #why-us .na-forms .na-form .na-inner
+        {
+          margin: 35px auto 0;
+          padding: 0 25px;
+          width: 950px;
+          color: #fff;
+        }
+          #why-us .na-forms .na-form .na-inner > header
+          {
+            font: normal 140% 'Elektra Light Pro Bold';
+            text-shadow: 0 1px 2px #333;
+          }
+
+          #why-us .na-form .na-button
+          {
+            width: 222px;
+            height: 222px;
+          }
+            #why-us .na-form .na-button.na-audit
+            {
+              background-image: url(../img/form-audit-small.png);
+            }
+
+            #why-us .na-form .na-button.na-order
+            {
+              background-image: url(../img/form-order-small.png);
+            }
+
+          #why-us .na-forms .na-form .na-inner form 
+          {
+            margin-top: 30px;
+            text-align: right;
+          }
+            #why-us .na-forms .na-form .na-inner form td 
+            { 
+              vertical-align: top;
+              padding: 0 10px 10px 0;
+              width: 250px; 
+            }              
+              #why-us .na-forms .na-form .na-inner form input,
+              #why-us .na-forms .na-form .na-inner form textarea,
+              #why-us .na-forms .na-form .na-inner form .na-custom-select span
+              {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 7px 7px 5px;
+                font: normal 90% 'Elektra Light Pro';
+                color: #fff;
+                background: transparent url(../img/input-bg.png) center center;
+                border: 1px solid #fff;
+              }
+                #why-us .na-forms .na-form .na-inner form textarea
+                {
+                  margin-left: 10px;
+                  height: 117px;
+                }
+
+              #why-us .na-forms .na-form .na-inner form button
+              {
+                margin: 0;
+                padding: 0;
+                font: normal 170% 'Elektra Light Pro Bold';
+                color: #fff;
+                background: none;
+                border: none;
+              }
+
+              #why-us .na-forms .na-form .na-inner form .na-custom-select
+              {
+                position: relative;
+              }
+                #why-us .na-forms .na-form .na-inner form .na-custom-select select
+                {
+                  position: relative;
+                  z-index: 10;
+                  box-sizing: border-box;
+                  display: block;
+                  width: 250px;
+                  height: 37px;
+                }
+
+                #why-us .na-forms .na-form .na-inner form .na-custom-select span
+                {
+                  position: absolute;
+                  z-index: 1;     
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;    
+                  text-align: left;         
+                }
+                  #why-us .na-forms .na-form .na-inner form .na-custom-select span:after
+                  {
+                    position: absolute;
+                    right: 7px;
+                    content: "▼";
+                  }

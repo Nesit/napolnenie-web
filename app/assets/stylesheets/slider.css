@@ -1,0 +1,37 @@
+section#slider 
+{
+  margin: 0 auto;
+  padding-left: 25px;
+  width: 975px;    
+  background: url(../img/logo.png) no-repeat 0 20px;
+}
+  #slider .na-contacts
+  {
+    margin-top: 5px;
+    text-align: right;
+    font: normal 140% 'Elektra Light Pro Bold';
+  }
+    #slider .na-contacts span 
+    {
+      color: #d30b00;
+    }
+
+    #slider .na-contacts a
+    {
+      color: inherit;
+      text-decoration: none;
+    }
+      #slider .na-contacts a:hover
+      {
+        text-decoration: underline;
+      }
+
+    #slider .na-contacts img
+    {
+      margin-top: 25px;
+    }
+
+    #slider .na-slider
+    {
+      margin-top: 35px;
+    }

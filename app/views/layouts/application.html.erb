@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>NapolnenieWeb</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-<%= yield %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
 
-</body>
+
+    <header>
+      <nav id="na-nav">
+        <a href="#service"><span>Услуги</span></a>
+        <a href="#clients">Наши клиенты</a>
+        <a href="#contacts">Способы оплаты</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="na-shadow"><div></div></div>
+    </header>
+
+    <%= yield %>
+
+    <footer id="contacts">
+      <nav class="na-social">
+        <a href="#" class="facebook"></a>
+        <a href="#" class="vk"></a>
+        <a href="#" class="twitter"></a>
+        <a href="#" class="mail"></a>
+        <a href="#" class="gplus"></a>
+        <a href="#" class="odnoklassniki"></a>
+        <a href="#" class="mailru"></a>
+      </nav>
+      <section class="na-payment">
+        <header>Мы принимаем</header>
+        <div class="na-list">
+          <a href="#" class="qiwi"></a>
+          <a href="#" class="webmoney"></a>
+          <a href="#" class="yandex-money"></a>
+          <a href="#" class="sberbank"></a>
+        </div>
+      </section>
+      <section class="na-contacts">
+        <header>Контакты</header>
+        <div class="clearfix"></div>
+        <div class="left">
+          1500 Pearl Street Ste 301<br>
+          Boulder, CO 80302<br>
+          USA
+        </div>
+        <div class="na-right">
+          +7 495 <span>777 77 77</span>
+          <br>
+          <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
