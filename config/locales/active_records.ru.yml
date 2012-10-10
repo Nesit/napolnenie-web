@@ -1,4 +1,13 @@
 ru:
+  active_admin:
+    dashboard: Общие
+  devise:
+    sessions:
+      admin_user:
+        signed_in: Вы успешно вошли
+    failure:
+      admin_user:
+        unauthenticated: Нужно авторизоваться
   activerecord:
     models:
       static_page:

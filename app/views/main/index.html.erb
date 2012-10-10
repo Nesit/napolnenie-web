@@ -18,7 +18,7 @@
       <div class="na-slider-next"></div>
       <div class="na-inner">
 	<% StaticPage.find_page(:main).slider_photos.each do |photo| %>
-	  <%= image_tag(photo.image.url) %>
+	  <%= image_tag(photo.image.url(:medium)) %>
 	<% end %>
       </div>
     </div>
