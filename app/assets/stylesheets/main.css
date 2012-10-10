@@ -24,7 +24,7 @@ body
   min-width: 1000px;
   font-size: 85%;
   line-height: 1.4;
-  background: #fff url(../img/bg.png);
+  background: #fff url(/assets/bg.png);
 }
 
 ::-moz-selection {
@@ -77,20 +77,20 @@ textarea {
 
 @font-face {
   font-family: 'Elektra Light Pro';
-  src: url('fonts/elektra_light_pro-webfont.eot');
-  src: url('fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/elektra_light_pro-webfont.woff') format('woff'),
-       url('fonts/elektra_light_pro-webfont.ttf') format('truetype');
+  src: url('/assets/fonts/elektra_light_pro-webfont.eot');
+  src: url('/assets/fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/elektra_light_pro-webfont.woff') format('woff'),
+       url('/assets/fonts/elektra_light_pro-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Elektra Light Pro Bold';
-  src: url('fonts/elektra_light_pro_bold-webfont.eot');
-  src: url('fonts/elektra_light_pro_bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/elektra_light_pro_bold-webfont.woff') format('woff'),
-       url('fonts/elektra_light_pro_bold-webfont.ttf') format('truetype');
+  src: url('/assets/fonts/elektra_light_pro_bold-webfont.eot');
+  src: url('/assets/fonts/elektra_light_pro_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/elektra_light_pro_bold-webfont.woff') format('woff'),
+       url('/assets/fonts/elektra_light_pro_bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -128,8 +128,13 @@ body > header
       {
         position: relative;
         background: #f8f8f8;
-        background: linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
+         background: -moz-linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
+         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#e8e8e8));
+         background: -webkit-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+         background: -o-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+         background: -ms-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+         background: linear-gradient(to bottom,  #f8f8f8 0%,#e8e8e8 100%);
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
         box-shadow: inset 0 0 0 1px #fff;
         border: 1px solid #d3d3d3;
         border-radius: 3px;
@@ -162,11 +167,11 @@ body > header
 }
   #na-main > section 
   {
-    margin-top: 60px;
   }
     #na-main > section > header 
     {
       margin-bottom: 5px;
+      padding-top: 60px;
       font: normal 400% 'Elektra Light Pro Bold';
       color: #d65048;
       text-shadow: 0 1px 1px #333;
@@ -176,6 +181,20 @@ body > header
         position: relative;
         height: 362px;
       }
+        .na-slider .na-slider-bg 
+        {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+          .na-slider .na-slider-bg img 
+          {
+            position: absolute;
+            display: none;
+          }
+
         .na-slider .na-slider-prev,
         .na-slider .na-slider-next
         {
@@ -190,13 +209,13 @@ body > header
           .na-slider .na-slider-prev
           {
             left: -77px;
-            background-image: url(../img/slider-prev.png);
+            background-image: url(/assets/slider-prev.png);
           }
 
           .na-slider .na-slider-next
           {
             right: -77px;
-            background-image: url(../img/slider-next.png);
+            background-image: url(/assets/slider-next.png);
           }
 
           .na-slider .na-inner
@@ -210,6 +229,7 @@ body > header
 
 footer 
 {
+  position: relative;
   text-align: center;
 }
   footer .na-social a
@@ -225,43 +245,43 @@ footer
     footer .na-social .facebook 
     {
       background-color: #00559e;
-      background-image: url(../img/facebook.png)
+      background-image: url(/assets/facebook.png)
     }
 
     footer .na-social .vk 
     {
       background-color: #5479a1;
-      background-image: url(../img/vk.png)
+      background-image: url(/assets/vk.png)
     }
 
     footer .na-social .twitter 
     {
       background-color: #00cbff;
-      background-image: url(../img/twitter.png)
+      background-image: url(/assets/twitter.png)
     }
 
     footer .na-social .mail 
     {
       background-color: #dc564e;
-      background-image: url(../img/mail.png)
+      background-image: url(/assets/mail.png)
     }
 
     footer .na-social .gplus
     {
       background-color: #c03929;
-      background-image: url(../img/gplus.png)
+      background-image: url(/assets/gplus.png)
     }
 
     footer .na-social .mailru 
     {
       background-color: #004b88;
-      background-image: url(../img/mailru.png)
+      background-image: url(/assets/mailru.png)
     }
 
     footer .na-social .odnoklassniki 
     {
       background-color: #e67d16;
-      background-image: url(../img/odnoklassniki.png)
+      background-image: url(/assets/odnoklassniki.png)
     }
 
   footer section
@@ -295,22 +315,22 @@ footer
       }
         footer .na-payment .na-list .qiwi
         {
-          background-image: url(../img/qiwi.png)
+          background-image: url(/assets/qiwi.png)
         }
 
         footer .na-payment .na-list .webmoney
         {
-          background-image: url(../img/webmoney.png)
+          background-image: url(/assets/webmoney.png)
         }
 
         footer .na-payment .na-list .yandex-money
         {
-          background-image: url(../img/yandex-money.png)
+          background-image: url(/assets/yandex-money.png)
         }
 
         footer .na-payment .na-list .sberbank
         {
-          background-image: url(../img/sberbank.png)
+          background-image: url(/assets/sberbank.png)
         }
 
       footer .na-contacts
@@ -343,6 +363,24 @@ footer
           {
             color: #d30b00;
           }
+
+  #na-top 
+  {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9;
+    bottom: 50px;
+    right: 50px;
+    width: 99px;
+    height: 99px;
+    background: url(/assets/top.png) no-repeat top;
+    border-radius: 50px;
+  }
+    #na-top:hover
+    {
+      background-position: bottom;
+    }
+
 
 .left  { float: left  }
 .right { float: right }

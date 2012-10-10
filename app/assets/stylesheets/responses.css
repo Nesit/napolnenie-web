@@ -47,6 +47,15 @@
       opacity: .7;
       background: #fff;
     }
+      #responses .na-parallax-wrapper .na-parallax 
+      {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(/assets/responses-parallax.png) repeat-y left top;
+      }
 
   #responses .na-tree
   {
@@ -160,7 +169,7 @@
               position: absolute;
               top: -1px;
               right: -72px;
-              content: url(../img/response-right.png);
+              content: url(/assets//response-right.png);
             }
 
             #responses .na-tree .na-year .na-item.response .na-inner .na-name
@@ -215,7 +224,7 @@
                 {
                   right: auto;
                   left: -72px;
-                  content: url(../img/response-left.png);
+                  content: url(/assets//response-left.png);
                 }
 
   #na-responses-tree-more
@@ -226,8 +235,13 @@
     font: normal 130% 'Elektra Light Pro';
     color: #222;
     background: #f8f8f8;
-    background: linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
+     background: -moz-linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#e8e8e8));
+     background: -webkit-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+     background: -o-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+     background: -ms-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%);
+     background: linear-gradient(to bottom,  #f8f8f8 0%,#e8e8e8 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 );
     box-shadow: inset 0 0 0 1px #fff;
     border: 1px solid #d3d3d3;
     border-radius: 3px;

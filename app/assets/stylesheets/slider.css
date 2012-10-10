@@ -3,7 +3,7 @@ section#slider
   margin: 0 auto;
   padding-left: 25px;
   width: 975px;    
-  background: url(../img/logo.png) no-repeat 0 20px;
+  background: url(/assets/logo.png) no-repeat 0 20px;
 }
   #slider .na-contacts
   {
