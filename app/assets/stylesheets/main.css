@@ -181,6 +181,20 @@ body > header
         position: relative;
         height: 362px;
       }
+        .na-slider .na-slider-bg 
+        {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+          .na-slider .na-slider-bg img 
+          {
+            position: absolute;
+            display: none;
+          }
+
         .na-slider .na-slider-prev,
         .na-slider .na-slider-next
         {
@@ -215,6 +229,7 @@ body > header
 
 footer 
 {
+  position: relative;
   text-align: center;
 }
   footer .na-social a
@@ -348,6 +363,24 @@ footer
           {
             color: #d30b00;
           }
+
+  #na-top 
+  {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9;
+    bottom: 50px;
+    right: 50px;
+    width: 99px;
+    height: 99px;
+    background: url(/assets/top.png) no-repeat top;
+    border-radius: 50px;
+  }
+    #na-top:hover
+    {
+      background-position: bottom;
+    }
+
 
 .left  { float: left  }
 .right { float: right }

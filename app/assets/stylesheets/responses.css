@@ -47,6 +47,15 @@
       opacity: .7;
       background: #fff;
     }
+      #responses .na-parallax-wrapper .na-parallax 
+      {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(/assets/responses-parallax.png) repeat-y left top;
+      }
 
   #responses .na-tree
   {
