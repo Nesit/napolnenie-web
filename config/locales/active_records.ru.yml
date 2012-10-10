@@ -10,6 +10,16 @@ ru:
         unauthenticated: Нужно авторизоваться
   activerecord:
     models:
+      service_category:
+        one: Категория
+        few: Категории
+        many: Категории
+        other: Категории
+      our_service:
+        one: Услуга
+        few: Услуги
+        many: Услуги
+        other: Услуги
       static_page:
         one: Страница
         few: Страници
@@ -50,3 +60,11 @@ ru:
       static_page:
         permalink: Адресс страницы
         text1: Главный текст
+      our_service:
+        service_category: Категория
+        title: Название
+        text: Текст
+      service_category:
+        position: Позиция
+        title: Название
+        description: Описание

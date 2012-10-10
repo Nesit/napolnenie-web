@@ -1,14 +1,10 @@
 main_page:
   permalink: main
 
-services:
-  permalink: services
-
-clients:
-  permalink: clients
-
 payments:
   permalink: payments
+  text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
 
 contacts:
   permalink: contacts
+  text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
