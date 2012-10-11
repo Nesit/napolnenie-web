@@ -5,3 +5,42 @@
   padding-left: 25px;
   width: 975px; 
 }
+  #clients .na-slider .na-inner > div
+  {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }  
+    #clients .na-slider .na-inner .na-item
+    {
+      overflow: hidden;
+      display: inline-block;
+      margin: 0 1% 16px 0;
+      width: 17%;
+      height: 110px;
+      text-align: center;
+    }
+      #clients .na-slider .na-inner > div .na-item:nth-child(5n)
+      {
+        margin-right: 0;
+      }
+
+      #clients .na-slider .na-inner .na-item span 
+      {
+        overflow: hidden;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 110px;
+        height: 110px;
+        background-color: #fff;
+        border: 1px solid #d3d3d3;
+        border-radius: 55px;
+      }
+
+      #clients .na-slider .na-inner .na-item img
+      {
+        vertical-align: middle;
+        height: 110px;
+      }

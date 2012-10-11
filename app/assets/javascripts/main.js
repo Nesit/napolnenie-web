@@ -14,20 +14,20 @@ $('.na-slider .na-slider-next')
     var inner = $(this).siblings('.na-inner')
     ,   first = inner.children(':last')
 
-    first.fadeOut('fast', function()
-    { 
-      first.prependTo(inner).show()
-    })
+    first.prependTo(inner).fadeOut('fast')
+    inner.children(':last').fadeIn('fast')
+
   })
 
 $('.na-slider .na-slider-prev')
   .click(function()
   {
     var inner = $(this).siblings('.na-inner')
-    ,   last = inner.children(':first')
-    
+    ,   last  = inner.children(':first')
+    ,   first = inner.children(':last')
 
-    last.hide().appendTo(inner).fadeIn('fast')
+    last.appendTo(inner).fadeIn('fast')
+    first.fadeOut('fast')
   })
 
 $('#why-us .na-forms .na-button[data-to]')
@@ -79,6 +79,11 @@ $('.na-slider')
   {
     var slider = $(this)
     ,   bgs    = $(this).find('.na-slider-bg img')
+    ,   imgs   = slider.find('.na-inner > *')
+    ,   first  = slider.find('.na-inner > *:last-child')
+
+    imgs.hide()
+
     sliderCounters[i] = 3
 
     bgs.each(function()
@@ -91,14 +96,16 @@ $('.na-slider')
         {
           el.fadeIn('fast')
           sliderCounters[i]--
-          console.log(el, sliderCounters)
-          if (!sliderCounters[i])
-          {
-            slider.find('.na-inner img').fadeIn('fast')
-          }
+          if (!sliderCounters[i]) first.fadeIn('fast')
         }
       img.src = el.attr('src')
     })
   })
+
+$('#na-top').click(function(e)
+{
+  e.preventDefault()
+  $("html, body").animate({ scrollTop: 0 }, "slow")
+})
 
 })})(jQuery)
