@@ -146,12 +146,12 @@
       <div class="na-slider-next"></div>
       <div class="na-inner">
         <div>
-      	<% OurClient.all.each_with_index do |client, index| %>
-      	  <div class="na-item"><span><%= image_tag client.logo %></span></div>
-          <% if ((index+1) % 15 == 0) %>
-            </div><div>
-          <% end %>
-      	<% end %>
+	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
+	    <% clients.each do |client| %>
+      	      <div class="na-item"><span><%= image_tag client.logo %></span></div>
+      	    <% end %>
+	   </div><div>
+	<% end %>
         </div>
       </div>
     </div>
