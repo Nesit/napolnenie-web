@@ -110,9 +110,11 @@
       <div class="na-shadow-top"><div class="na-shadow"><div></div></div></div>
       <div class="na-shadow-bottom"><div class="na-shadow"><div></div></div></div>
 
-      <div class="na-parallax back"></div>
-      <div class="na-cover"></div>
-      <div class="na-parallax front"></div>
+      <div class="na-parallax back part-1"></div>
+      <!-- <div class="na-parallax back part-2"></div>
+      <div class="na-parallax back part-3"></div>-->
+      <!-- <div class="na-cover"></div> -->
+      <!-- <div class="na-parallax front"></div> -->
       <nav>
 
         <% ServiceCategory.order('position ASC').each do |category| %>
@@ -145,14 +147,13 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-        <div>
-	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
-	    <% clients.each do |client| %>
-      	      <div class="na-item"><span><%= image_tag client.logo %></span></div>
-      	    <% end %>
-	   </div><div>
-	<% end %>
-        </div>
+    	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
+          <div>
+    	    <% clients.each do |client| %>
+  	        <div class="na-item"><span><%= image_tag client.logo %></span></div>
+          <% end %>
+    	    </div>
+    	  <% end %>
       </div>
     </div>
   </section>

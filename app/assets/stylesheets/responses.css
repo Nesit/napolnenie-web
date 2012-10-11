@@ -55,7 +55,7 @@
         bottom: 0;
         left: 0;
         background-image: url(/assets/responses-parallax.png);
-        background-repeat: repeat-y;
+        background-repeat: no-repeat;
       }
         #responses .na-parallax-wrapper .na-parallax.front 
         {
