@@ -21,6 +21,7 @@
 
 body 
 {
+  margin: 0;
   min-width: 1000px;
   font-size: 85%;
   line-height: 1.4;
@@ -234,6 +235,7 @@ footer
 }
   footer .na-social a
   {
+    opacity: 1;
     display: inline-block;
     margin: 0 10px;
     width: 119px;
@@ -241,7 +243,16 @@ footer
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 60px;
+     -webkit-transition: opacity 0.3s ease;
+     -moz-transition: opacity 0.3s ease;
+     -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
+    footer .na-social a:hover
+    {
+      opacity: .6;
+    }
+
     footer .na-social .facebook 
     {
       background-color: #00559e;
@@ -303,6 +314,7 @@ footer
     }
       footer .na-payment .na-list a
       {
+        opacity: 1;
         display: inline-block;
         margin: 0 10px;
         width: 119px;
@@ -312,7 +324,16 @@ footer
         background-repeat: no-repeat;
         border: 1px solid #bbb;
         border-radius: 60px;
-      }
+         -webkit-transition: opacity 0.3s ease;
+         -moz-transition: opacity 0.3s ease;
+         -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }      
+        footer .na-payment .na-list a:hover
+        {
+          opacity: .6;
+        }
+
         footer .na-payment .na-list .qiwi
         {
           background-image: url(/assets/qiwi.png)
