@@ -1,7 +1,7 @@
 #responses
 {
   position: relative;
-  margin-bottom: 92px;
+  margin: 50px 0 92px;
   text-align: center;
   border-top: 1px solid #e3e3e3;
 }
@@ -61,7 +61,7 @@
   {
     position: relative;
     z-index: 2;
-    margin: 30px auto;
+    margin: 100px auto;
     font: normal 100% "Elektra Light Pro"
   }
     #responses .na-tree .na-year > header
@@ -229,8 +229,10 @@
 
   #na-responses-tree-more
   {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
     display: inline-block;
-    margin-top: 70px;
     padding: 4px 25px;
     font: normal 130% 'Elektra Light Pro';
     color: #222;

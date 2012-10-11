@@ -17,9 +17,9 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-	<% StaticPage.find_page(:main).slider_photos.each do |photo| %>
-	  <%= image_tag(photo.image.url) %>
-	<% end %>
+      	<% StaticPage.find_page(:main).slider_photos.each_with_index do |photo| %>
+      	  <%= image_tag(photo.image.url) %>
+      	<% end %>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -151,9 +151,14 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-	<% OurClient.all.each do |client| %>
-	  <%= image_tag client.logo %>
-	<% end %>
+        <div>
+      	<% OurClient.all.each_with_index do |client, index| %>
+      	  <div class="na-item"><span><%= image_tag client.logo %></span></div>
+          <% if ((index+1) % 15 == 0) %>
+            </div><div>
+          <% end %>
+      	<% end %>
+        </div>
       </div>
     </div>
   </section>
