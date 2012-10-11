@@ -11,5 +11,6 @@ NapolnenieWeb::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   match "/reviews" => "reviews#show"
+  match "/:permalink" => "static_pages#show"
   root :to => 'main#index'
 end
