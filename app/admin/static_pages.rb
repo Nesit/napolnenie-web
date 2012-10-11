@@ -16,8 +16,15 @@ ActiveAdmin.register StaticPage do
     end
   end
 
+  form do |f|
+    f.inputs do
+      f.input :permalink
+      f.input :text1, as: :html_editor
+    end
+    f.buttons
+  end
+
   index do
-    id_column
     column :permalink
     column "Количество слайдов" do |page|
       page.slider_photos.count

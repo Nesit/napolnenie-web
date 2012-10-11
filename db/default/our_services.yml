@@ -1,0 +1,7 @@
+tovarnyh_poziciy:
+  service_category_id: 2
+  title: Товарных Позиций
+
+content_managment:
+  service_category_id: 2
+  title: Удаленный Контент-Менеджмент

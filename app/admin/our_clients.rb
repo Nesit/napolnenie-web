@@ -5,7 +5,6 @@ ActiveAdmin.register OurClient do
   config.clear_sidebar_sections!
 
   index do
-    id_column
     column :title
     column "Лого" do |client|
       link_to image_tag(client.logo.url), admin_our_client_path(client)

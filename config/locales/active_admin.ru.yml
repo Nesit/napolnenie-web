@@ -1,0 +1,7 @@
+ru:
+  active_admin:
+    create_model: "Новый %{model}"
+    scopes:
+      all: Все
+      readed: Прочтенные
+      unreaded: Не прочтенные
