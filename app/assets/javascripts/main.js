@@ -1,11 +1,20 @@
 (function($){$(document).ready(function(){
 
 $('#na-nav a')
-  .click(function()
+  .click(function(e)
   {
+    var url = $(this).attr('href').slice(1)
+
+    if ( window.location.pathname == '/' && url.substr(0,1) == '#') 
+    {
+      e.preventDefault()
+    }
+
     $(this).addClass('active')
       .siblings('.active')
       .removeClass('active')
+
+    $("html, body").animate({ scrollTop: $(url).offset().top }, "slow")    
   })
 
 $('.na-slider .na-slider-next')
@@ -61,17 +70,26 @@ $(window).scroll(function()
   {
     if ($(window).scrollTop() + window.innerHeight > $(this).offset().top)
     {
-      var offset = $(this).height() - ( $(this).height() + $(this).offset().top - $(window).scrollTop() )/2
+      var offset = $(this).height() - ( $(this).height() + $(this).offset().top - $(window).scrollTop() )*1.5
 
       $(this).find('.na-parallax.back')
-        .css('background-position', '0 '+(offset/1.5)+'px')
+        .css('background-position', '0 '+(offset/1.7)+'px')
 
       $(this).find('.na-parallax.front')
-        .css('background-position', '0 '+offset+'px')
+        .css('background-position', '300px '+(offset/1.4)+'px')
     }
 
   })
 })
+
+if ( (window.location.hash).length )
+{
+  $('a[href="/'+window.location.hash+'"]').addClass('active')
+}
+else if ( (window.location.pathname).length )
+{
+  $('a[href="'+window.location.pathname+'"]').addClass('active')
+}
 
 var sliderCounters = []
 $('.na-slider')
@@ -79,8 +97,8 @@ $('.na-slider')
   {
     var slider = $(this)
     ,   bgs    = $(this).find('.na-slider-bg img')
-    ,   imgs   = slider.find('.na-inner > *')
-    ,   first  = slider.find('.na-inner > *:last-child')
+    ,   imgs   =  slider.find('.na-inner > *')
+    ,   first  =  slider.find('.na-inner > *:last-child')
 
     imgs.hide()
 
@@ -94,9 +112,19 @@ $('.na-slider')
       img.onload = 
         function ()
         {
-          el.fadeIn('fast')
           sliderCounters[i]--
-          if (!sliderCounters[i]) first.fadeIn('fast')
+          if (!sliderCounters[i]) 
+          {
+            bgs.each(function(i)
+            {
+              if (i < 2) $(this).delay(500*(i+1)).fadeIn('normal')
+              else 
+                $(this).delay(500*(i+1)).fadeIn('normal',function()
+                {
+                  first.delay(500).fadeIn('fast',function(){ bgs.fadeOut('fast') })
+                })
+            })
+          }
         }
       img.src = el.attr('src')
     })
