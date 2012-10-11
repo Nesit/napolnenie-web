@@ -120,7 +120,7 @@
 	<% ServiceCategory.order('position ASC').each do |category| %>
 	  <div class="na-item">
 	    <span><%= category.title %></span>
-	    <div class="na-hint"><%= category.description %></div>
+	    <div class="na-hint"><%== category.description %></div>
 	    <% category.our_services.each do |service| %>
 	      <a href="#" class="circle-left"><span><%= service.title %></span></a>
 	    <% end %>
@@ -130,8 +130,6 @@
 	<div class="na-item press active">
 	  <span>Пресс-релизы</span>
 	  <div class="na-hint">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей</div>
-	  <a href="#" class="circle-left"><span>товарных позиций</span></a>
-	  <a href="#" class="circle-right"><span>удаленный контент-менеджмент</span></a>
 	</div>
       </nav>
 

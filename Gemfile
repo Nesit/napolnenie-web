@@ -12,7 +12,9 @@ end
 
 gem 'jquery-rails'
 gem 'paperclip'
+gem 'devise-russian'
 gem 'activeadmin'
+gem 'active_admin_editor'
 gem 'russian'
 gem 'unicorn'
 gem 'ffaker'

@@ -1,9 +1,11 @@
 seo:
+  id: 1
   title: SEO
   description: AAAAAAAAA
   position: 1
 
 napolnenie:
+  id: 2
   title: Наполнение
   description: AAAAAAAA
   position: 2
