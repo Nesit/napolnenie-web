@@ -145,14 +145,13 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-        <div>
-	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
-	    <% clients.each do |client| %>
-      	      <div class="na-item"><span><%= image_tag client.logo %></span></div>
-      	    <% end %>
-	   </div><div>
-	<% end %>
-        </div>
+    	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
+          <div>
+    	    <% clients.each do |client| %>
+  	        <div class="na-item"><span><%= image_tag client.logo %></span></div>
+          <% end %>
+    	    </div>
+    	  <% end %>
       </div>
     </div>
   </section>
