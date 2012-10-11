@@ -3,6 +3,16 @@ ru:
     dashboard: Общие
   activerecord:
     models:
+      service_request:
+        one: Услуга
+        few: Услуги
+        many: Услуги
+        other: Услуги
+      audit_request:
+        one: Аудит
+        few: Аудит
+        many: Аудит
+        other: Аудит
       service_category:
         one: Категория
         few: Категории
@@ -61,3 +71,16 @@ ru:
         position: Позиция
         title: Название
         description: Описание
+      audit_request:
+        url: Адрес сайта
+        email: Контактный email
+        phone: Контактный телефон
+        additionally: Дополнительные данные
+        readed: Статус
+      service_request:
+        name: Имя
+        email: Контактный email
+        phone: Контактный телефон
+        additionally: Дополнительные данные
+        readed: Статус
+        our_service: Название услуги
