@@ -186,6 +186,7 @@
 
               #why-us .na-forms .na-form .na-inner form .na-custom-select
               {
+                overflow: hidden;
                 position: relative;
               }
                 #why-us .na-forms .na-form .na-inner form .na-custom-select select

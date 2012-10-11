@@ -45,7 +45,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-position: center bottom;
     background-repeat: repeat-y;
   }
   #service .na-parallax.back 
@@ -88,6 +87,8 @@
       margin-right: 100px;
       width: 300px;
       height: 300px;
+      color: #616765;
+      text-decoration: none;  
       background-color: rgba(255,255,255,.85);
       border: 1px solid #c8c8c8;
       border-radius: 150px;
@@ -102,29 +103,29 @@
           vertical-align: middle;
           text-transform: uppercase;
         }
-          #service nav .na-item.seo > span 
+          #service nav .na-item.circle-1 > span 
           {
             font-size: 300%;
           }
-            #service nav .na-item.seo.active > span
+            #service nav .na-item.circle-1.active > span
             {
               font-size: 200%;
             }
 
-          #service nav .na-item.content > span
+          #service nav .na-item.circle-2 > span
           {
             font-size: 100%;
           }
-            #service nav .na-item.content.active > span
+            #service nav .na-item.circle-2.active > span
             {
               font-size: 80%;
             }
 
-          #service nav .na-item.press > span
+          #service nav .na-item.circle-3 > span
           {
             font-size: 120%;
           }
-            #service nav .na-item.press.active > span
+            #service nav .na-item.circle-3.active > span
             {
               font-size: 100%;
             }
@@ -155,13 +156,16 @@
           display: table;
           position: absolute;
           bottom: -200px;
+          padding: 0;
+          width: 210px;
+          height: 210px;
           line-height: normal;
-          font-size: 90%;
+          font-size: 70%;
           text-decoration: none;
           color: #616765;
         }
-          #service nav .na-item.active a.circle-left  { left : -115px }
-          #service nav .na-item.active a.circle-right { right: -115px }
+          #service nav .na-item.active a.circle-0 { left : -115px }
+          #service nav .na-item.active a.circle-1 { right: -115px }
 
           #service nav .na-item.active a span 
           {
