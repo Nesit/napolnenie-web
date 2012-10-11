@@ -17,6 +17,17 @@ end
 
 module NapolnenieWeb
   class Application < Rails::Application
+    config.before_configuration do
+      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+      I18n.locale = :ru
+      I18n.default_locale = :ru
+      config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+      config.i18n.locale = :ru
+      # bypasses rails bug with i18n in production\
+      I18n.reload!
+      config.i18n.reload!
+    end
+
     config.time_zone = 'Moscow'
     config.i18n.default_locale = :ru
     config.i18n.locale = :ru
