@@ -63,6 +63,9 @@ ru:
       static_page:
         permalink: Адресс страницы
         text1: Главный текст
+        title: Название страницы
+        keywords: Ключивые слова
+        description: Описание
       our_service:
         service_category: Категория
         title: Название

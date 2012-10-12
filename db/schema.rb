@@ -123,8 +123,11 @@ ActiveRecord::Schema.define(:version => 20121011081633) do
   create_table "static_pages", :force => true do |t|
     t.string   "permalink"
     t.text     "text1"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "title"
+    t.text     "keywords",    :default => "", :null => false
+    t.text     "description", :default => "", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
 end

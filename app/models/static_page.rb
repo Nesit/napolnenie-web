@@ -1,5 +1,6 @@
 class StaticPage < ActiveRecord::Base
-  attr_accessible :permalink, :text1, :slider_photos_attributes
+  attr_accessible :permalink, :text1, :slider_photos_attributes,
+                  :title, :keywords, :description
 
   has_many :slider_photos,  dependent: :destroy
 

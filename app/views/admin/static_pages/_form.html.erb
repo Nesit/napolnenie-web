@@ -1,7 +1,13 @@
 <%= semantic_form_for [:admin, @static_page], html: { multipart: true } do |f| %>
   <%= f.inputs 'Основное' do %>
-    <%= f.input :permalink %>
-    <%= f.input :text1 %>
+    <%#= f.input :permalink %>
+    <%= f.input :text1, as: :html_editor %>
+  <% end %>
+
+  <%= f.inputs 'SEO' do %>
+    <%= f.input :title, :input_html => { :rows => 5 } %>
+    <%= f.input :keywords, :input_html => { :rows => 5 } %>
+    <%= f.input :description, :input_html => { :rows => 5 } %>
   <% end %>
 
   <%= f.inputs "Фото в слайдере" do %>
