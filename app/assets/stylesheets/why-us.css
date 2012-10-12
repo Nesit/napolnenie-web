@@ -52,6 +52,7 @@
         #why-us .na-forms .na-buttons .na-button:hover .na-hint 
         {
           opacity: 1;
+          font-family: 'Elektra Light Pro';
         }
 
       #why-us .na-forms .na-button.na-order
