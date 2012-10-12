@@ -55,6 +55,7 @@ ru:
         title: Название
         logo: Логотип
         created_at: Дата создания
+        description: Описание
       review:
         company_name: Название компании
         author: Автор

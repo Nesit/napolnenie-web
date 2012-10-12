@@ -16,6 +16,7 @@ ActiveAdmin.register OurClient do
   form html: { enctype: 'multipart/form-data' } do |f|
     f.inputs 'Основное' do
       f.input :title
+      f.input :description, :input_html => { :rows => 5 }
       f.input :logo, as: :file,
       hint: f.template.image_tag(f.object.logo.url)
     end

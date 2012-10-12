@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20121011081633) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.string   "title"
+    t.text     "description"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
