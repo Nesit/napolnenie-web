@@ -125,10 +125,14 @@ ActiveRecord::Schema.define(:version => 20121011081633) do
     t.string   "permalink"
     t.text     "text1"
     t.text     "title"
-    t.text     "keywords",    :default => "", :null => false
-    t.text     "description", :default => "", :null => false
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.text     "keywords",           :default => "", :null => false
+    t.text     "description",        :default => "", :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
 end

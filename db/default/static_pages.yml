@@ -1,16 +1,28 @@
 main_page:
   permalink: main
   text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  title: <%= Faker::Lorem.sentences.join(' ') %>
+  keywords: <%= Faker::Lorem.words.join(' ') %>
+  description: <%= Faker::Lorem.words.join(' ') %>
 
 payments:
   permalink: payments
   text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  title: <%= Faker::Lorem.sentences.join(' ') %>
+  keywords: <%= Faker::Lorem.words.join(' ') %>
+  description: <%= Faker::Lorem.words.join(' ') %>
 
 contacts:
   permalink: contacts
   text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  title: <%= Faker::Lorem.sentences.join(' ') %>
+  keywords: <%= Faker::Lorem.words.join(' ') %>
+  description: <%= Faker::Lorem.words.join(' ') %>
 
 press_releases:
   permalink: press_releases
   text1: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  title: <%= Faker::Lorem.sentences.join(' ') %>
+  keywords: <%= Faker::Lorem.words.join(' ') %>
+  description: <%= Faker::Lorem.words.join(' ') %>
 

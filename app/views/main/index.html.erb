@@ -199,13 +199,14 @@
 <footer id="contacts">
   <a href="#" id="na-top"></a>
   <nav class="na-social">
-    <a href="#" class="facebook"></a>
-    <a href="#" class="vk"></a>
-    <a href="#" class="twitter"></a>
+    <% url = "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
+    <a href="http://www.facebook.com/sharer.php?u=<%= url %>" target="_blank" class="facebook"></a>
+    <a href="http://vkontakte.ru/share.php?url=<%= url %>" target="_blank" class="vk"></a>
+    <a href="http://twitter.com/home?status=<%= url %>" target="_blank" class="twitter"></a>
     <a href="#" class="mail"></a>
-    <a href="#" class="gplus"></a>
-    <a href="#" class="odnoklassniki"></a>
-    <a href="#" class="mailru"></a>
+    <a href="https://plus.google.com/share?url=<%= url %>" target="_blank" class="gplus"></a>
+    <a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=<%= url %>" target="_blank" class="odnoklassniki"></a>
+    <a href="http://connect.mail.ru/share?share_url=<%= url %>" target="_blank" class="mailru"></a>
   </nav>
   <section class="na-payment">
     <header>Мы принимаем</header>

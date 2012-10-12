@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
     @title = page.title
     @keywords = page.keywords
     @description = page.description
+    @image = page.image.url(:thumb, false)
   end
 end
