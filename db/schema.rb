@@ -67,8 +67,12 @@ ActiveRecord::Schema.define(:version => 20121015073947) do
   create_table "banners", :force => true do |t|
     t.integer  "static_page_id"
     t.text     "text"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "messages", :force => true do |t|

@@ -74,6 +74,7 @@ ru:
         description: Описание
         image: Картинка для социальных сетей
         banner: Банер
+        banner_image: Изображение
       our_service:
         service_category: Категория
         title: Название
@@ -98,3 +99,4 @@ ru:
       banner:
         static_page: Страница
         text: Текст
+        image: Картинка

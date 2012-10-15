@@ -10,7 +10,9 @@
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-	<!-- SLIDER HERE -->
+	<% @page.banners.each do |banner| %>
+          <%= image_tag(banner.image.url(:medium)) %>
+        <% end %>
       </div>
     </div>
     <div class="clearfix"></div>

@@ -20,6 +20,7 @@
 
       <%= f.input :id, as: :hidden, :input_html => {:id => 'static_page_id'} %>
       <%= f.input :banner, as: :text, :input_html => {:id => 'add_banner_text'} %>
+      <%= f.input :banner_image, :as => :file, :input_html => {:id => 'add_banner_image'} %>
       <%= f.action :submit, :button_html => { :id => 'add_banner', :value => 'Добавить баннер' }  %>
     <% end %>
   <% end %>

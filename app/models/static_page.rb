@@ -5,9 +5,9 @@ class StaticPage < ActiveRecord::Base
                             path: ":rails_root/public/system/static_pages/:attachment/:id/:style/:filename",
                             url: "/system/static_pages/:attachment/:id/:style/:filename",
                             default_style: :thumb, default_url: 'loading.gif'
-  attr_accessor :banner
+  attr_accessor :banner, :banner_image
 
-  attr_accessible :permalink, :text1, :banner,
+  attr_accessible :permalink, :text1, :banner, :banner_image,
                   :title, :keywords, :description, :image
 
   def to_param

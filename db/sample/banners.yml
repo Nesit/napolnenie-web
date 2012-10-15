@@ -1,4 +1,4 @@
-<% 50.times.each do |i| %>
+<% 30.times.each do |i| %>
 banner_<%= i %>:
   static_page_id: <%= rand(1..4) %>
   text:  <%= Faker::HTMLIpsum.fancy_string(10, true) %>
