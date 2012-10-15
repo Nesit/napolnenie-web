@@ -11,15 +11,5 @@
     <%= f.input :image, :as => :file, :hint => f.template.image_tag(f.object.image.url) %>
   <% end %>
 
-  <%= f.inputs "Фото в слайдере" do %>
-    <% f.object.slider_photos.each do |photo| %>
-      <div class="photo">
-	<%= link_to image_tag(photo.image), photo.image.url(:original) %>
-	<%= link_to 'Убрать', '', :class => 'remove_slider_photo', 'data-id' => photo.id %>
-      </div>
-    <% end %>
-    <input type="file" name="static_page[slider_photos_attributes][][image]" multiple="multiple" accept="image"/>
-  <% end %>
-
   <%= f.actions %>
 <% end %>

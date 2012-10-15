@@ -4,23 +4,14 @@ ActiveAdmin.register StaticPage do
 
   filter :permalink
 
-  form partial: "form"
+  form partial: 'form'
 
   controller do
     defaults finder: :find_by_permalink
-
-    # TODO: add bad response when photos can't destroy
-    def destroy_slider_photo
-      SliderPhoto.find(params[:id]).destroy
-      head :ok
-    end
   end
 
   index do
     column :permalink
-    column "Количество слайдов" do |page|
-      page.slider_photos.count
-    end
     default_actions
   end
 

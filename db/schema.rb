@@ -119,16 +119,6 @@ ActiveRecord::Schema.define(:version => 20121015071707) do
     t.datetime "updated_at",                        :null => false
   end
 
-  create_table "slider_photos", :force => true do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer  "static_page_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
   create_table "static_pages", :force => true do |t|
     t.string   "permalink"
     t.text     "text1"
