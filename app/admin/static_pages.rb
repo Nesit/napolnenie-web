@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ActiveAdmin.register StaticPage do
-  menu label: 'Страницы'
+  menu label: 'Страницы', parent: 'Страницы'
 
   filter :permalink
 
@@ -8,10 +8,18 @@ ActiveAdmin.register StaticPage do
 
   controller do
     defaults finder: :find_by_permalink
+
+    def add_banner
+      banner = Banner.create(params[:banner])
+      render :layout => false, :partial => 'add_banner', :locals => {:banner => banner}
+    end
   end
 
   index do
     column :permalink
+    column 'Количетсво баннеров' do |resource|
+      resource.banners.count
+    end
     default_actions
   end
 

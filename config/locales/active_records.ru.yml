@@ -3,6 +3,11 @@ ru:
     dashboard: Общие
   activerecord:
     models:
+      banner:
+        one: Банер
+        few: Банеры
+        many: Банеры
+        other: Банеры
       service_request:
         one: Услуга
         few: Услуги
@@ -67,6 +72,8 @@ ru:
         title: Название страницы
         keywords: Ключивые слова
         description: Описание
+        image: Картинка для социальных сетей
+        banner: Банер
       our_service:
         service_category: Категория
         title: Название
@@ -88,3 +95,6 @@ ru:
         additionally: Дополнительные данные
         readed: Статус
         our_service: Название услуги
+      banner:
+        static_page: Страница
+        text: Текст

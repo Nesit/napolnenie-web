@@ -2,7 +2,7 @@ NapolnenieWeb::Application.routes.draw do
   # Admin panel
   namespace :admin do
     resources :static_pages do
-      delete :destroy_slider_photo, :on => :collection
+      post :add_banner, :on => :collection
     end
   end
 
