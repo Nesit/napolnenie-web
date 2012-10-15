@@ -267,13 +267,32 @@ body > header
               position: absolute;
             }
 
+.na-non-scrollable-bg
+{
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/assets/bg.png);
+}
+
 .na-static-page
 {  
-  margin: 30px auto 0;  
+  margin: 30px auto 80px;  
   padding-left: 25px;
   width: 975px;    
   font: normal 140% 'Elektra Light Pro';
 }
+  .na-static-page h1
+  {
+      margin: 0 0 5px -25px;
+      padding-top: 60px;
+      font: normal 300% 'Elektra Light Pro Bold';
+      color: #d65048;
+      text-shadow: 0 1px 1px #333;    
+  }
 
 footer 
 {
