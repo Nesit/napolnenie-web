@@ -10,6 +10,8 @@ NapolnenieWeb::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  resources :services, only: :show
+
   match "/reviews" => "reviews#show"
   match "/receive_requests" => "receive_requests#receive", via: :post
   match "/:permalink" => "static_pages#show"
