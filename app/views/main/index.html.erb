@@ -25,7 +25,7 @@
         <div class="na-inner">
           <header>Заказать услугу</header>
           <div class="na-button na-audit right" data-to="na-audit"></div>
-          <%= form_for ServiceRequest.new, url: '/receive_requests', remote: true do |f| %>
+          <%= form_for ServiceRequest.new, :url => '/receive_requests', :remote => true, :validate => true do |f| %>
             <table>
               <tr>
                 <td>
@@ -61,25 +61,25 @@
         <div class="na-inner">
           <header>Бесплатный аудит</header>
           <div class="na-button na-order left" data-to="na-order"></div>
-          <%= form_for AuditRequest.new, url: '/receive_requests', remote: true do |f| %>
+          <%= form_for AuditRequest.new, url: '/receive_requests', remote: true, validate: true do |f| %>
             <table>
               <tr>
                 <td>
-		              <%= f.text_field :url, :placeholder => "Адрес сайта" %>
+		  <%= f.text_field :url, :placeholder => "Адрес сайта" %>
                 </td>
                 <td rowspan="3">
-		              <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+		  <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
                 </td>
               </tr>
               <tr>
                 <td>
-		              <%= f.email_field :email, :placeholder => "E-mail" %>
-		            </td>
+		  <%= f.email_field :email, :placeholder => "E-mail", :validate => true %>
+		</td>
               </tr>
               <tr>
                 <td>
-            		  <%= f.text_field :phone, :placeholder => "Телефон" %>
-            		</td>
+            	  <%= f.text_field :phone, :placeholder => "Телефон" %>
+            	</td>
               </tr>
               <tr>
                 <td colspan="2"><button>Готово</button></td>

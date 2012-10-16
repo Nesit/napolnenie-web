@@ -11,6 +11,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'client_side_validations'
 gem 'paperclip'
 gem 'devise-russian'
 gem 'activeadmin'
