@@ -76,7 +76,9 @@ ActiveRecord::Schema.define(:version => 20121015073947) do
   end
 
   create_table "messages", :force => true do |t|
-    t.string   "title"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
     t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

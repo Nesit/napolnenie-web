@@ -106,6 +106,8 @@ ru:
         text: Текст
         image: Картинка
       message:
-        title: Заголовок
+        email: Email
+        name: Имя
+        phone: Телефон
         text: Текст
         
