@@ -19,6 +19,7 @@ gem 'russian'
 gem 'unicorn'
 gem 'ffaker'
 gem 'will_paginate'
+gem 'exception_notification'
 
 group :development do
   gem 'sqlite3'
@@ -27,4 +28,5 @@ group :development do
   gem 'sextant'
   gem 'debugger'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
