@@ -3,6 +3,11 @@ ru:
     dashboard: Общие
   activerecord:
     models:
+      message:
+        one: Сообщение
+        few: Сообщения
+        many: Сообщения
+        other: Сообщения
       banner:
         one: Банер
         few: Банеры
@@ -100,3 +105,7 @@ ru:
         static_page: Страница
         text: Текст
         image: Картинка
+      message:
+        title: Заголовок
+        text: Текст
+        

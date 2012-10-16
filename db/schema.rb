@@ -77,10 +77,9 @@ ActiveRecord::Schema.define(:version => 20121015073947) do
 
   create_table "messages", :force => true do |t|
     t.string   "title"
-    t.string   "recipient_address"
     t.text     "text"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "our_clients", :force => true do |t|

@@ -1,0 +1,5 @@
+<% 30.times.each do |i| %>
+message_<%= i %>:
+  title: <%= Faker::Lorem.words.join(' ') %>
+  text: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+<% end %>

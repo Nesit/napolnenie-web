@@ -4,7 +4,7 @@ class Notifier < ActionMailer::Base
 
   def send_message(message)
     @message = message
-    mail(:to => @message.recipient_address,
-         :subject => 'Создание соощения')
+    mail(:to => 'hello@napolnenie-web.ru',
+         :subject => 'Новое сообщение')
   end
 end
