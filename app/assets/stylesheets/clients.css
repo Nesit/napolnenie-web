@@ -37,7 +37,33 @@
         background-color: #fff;
         border: 1px solid #d3d3d3;
         border-radius: 55px;
+	cursor: pointer; 
       }
+
+	#clients .na-slider .na-inner .na-item .na-hint
+      {
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+        width: 111px;
+        height: 108px;
+        
+        line-height: 100px;
+        text-align: center;
+        color: #999;
+	margin-top: -138px;
+	margin-left: -23px;
+        background: url(/assets/hint-small.png) no-repeat;
+         -webkit-transition: opacity 0.3s ease;
+         -moz-transition: opacity 0.3s ease;
+         -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+	#clients .na-slider .na-inner .na-item:hover .na-hint
+        {
+          opacity: 1;
+        }
 
       #clients .na-slider .na-inner .na-item img
       {
