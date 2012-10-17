@@ -160,7 +160,7 @@
 	<div>
 	  <% clients.each do |client| %>
 	    <div class="na-item"><span><%= image_tag client.logo %></span>
-	      <div class="na-hint">Клиент!</div></div>
+	      <div class="na-hint"><%= client.title %></div></div>
 	  <% end %>
 	</div>
       <% end %>
