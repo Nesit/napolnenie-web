@@ -48,12 +48,12 @@
         box-sizing: border-box;
         width: 111px;
         height: 108px;
-        
-        line-height: 100px;
+        padding: 30px 15px 30px 15px;
+        line-height: 15px;
         text-align: center;
         color: #999;
-	margin-top: -138px;
-	margin-left: -23px;
+	       margin-top: -138px;
+	       margin-left: -23px;
         background: url(/assets/hint-small.png) no-repeat;
          -webkit-transition: opacity 0.3s ease;
          -moz-transition: opacity 0.3s ease;

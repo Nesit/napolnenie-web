@@ -267,23 +267,23 @@ body > header
             {
               position: absolute;
             }
-	.na-slider .slider_text
+	.na-slider .na-inner .slider_text
 	{position: absolute; 
 	 bottom: 0px;
 	 left: 0px;
 	 padding: 10px;
 	 font: 18px Elektra Light Pro; 
 	 background: url (text_bg.png);
-
+   display: block;
 	}
-	.na-slider .slider_text h2
-	{color: #fff;
+	.na-slider .na-inner .slider_text h2
+	{color: #black;
 	 font: bold 32px Elektra Light Pro;
 	 line-height: 0px;
 	}
 
-	.na-slider .slider_text p
-	{color: #fff;
+	.na-slider .na-inner .slider_text p
+	{color: #black;
 	 
 
 	}

@@ -9,10 +9,14 @@
     <div class="na-slider-next"></div>
     <div class="na-inner">
       <% page.banners.each do |banner| %>
-	<%= image_tag(banner.image.url(:medium)) %>
-	<div class="slider_text">
-	  <%== banner.text %>
-	</div>
+      <div class="na-slide">
+        <%= image_tag(banner.image.url(:medium)) %>
+        <div class="slider_text">
+          <h2>Autem sit sit voluptas dignissimos placeat voluptatum.</h2>
+          <p>Voluptas est ut occaecati. Ut sed facere eius veritatis alias quis vel ut. Quasi repellat incidunt voluptate excepturi consequuntur nobis molestiae. Et quas est qui optio rerum nisi quisquam.</p>
+	       <%== banner.text %>
+	       </div>
+      </div>
       <% end %>
     </div>
   </div>
