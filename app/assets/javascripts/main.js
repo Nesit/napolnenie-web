@@ -18,7 +18,8 @@
     $('footer .na-social .mail').click(function() {
 	$('').hide();
 	$('.na-mail').show();
-	$("form").validate()
+	$("form").validate();
+	return false
     })
 
 
