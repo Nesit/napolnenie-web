@@ -20,3 +20,4 @@ pickle-email-*.html
 *.js~
 *.css~
 *.erb~
+/public/uploads

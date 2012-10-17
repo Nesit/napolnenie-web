@@ -1,19 +1,35 @@
-<div class="na-static-page">
-<%== @page.text1 %>
-</div>
+<div class="na-non-scrollable-bg"></div>
 
+<section id="slider">
+  <div class="na-slider">
+    <div class="na-slider-bg">
+      <img src="/assets/loader-1.png" alt="">
+      <img src="/assets/loader-2.png" alt="">
+      <img src="/assets/loader-3.png" alt="">
+    </div>
+    <div class="na-slider-prev"></div>
+    <div class="na-slider-next"></div>
+    <div class="na-inner">
+      <% @page.banners.each do |banner| %>
+        <%= image_tag(banner.image.url(:medium)) %>
+      <% end %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
+<div class="na-static-page">
+  <%== @page.text1 %>
+</div>
 
 <footer>
  <section class="na-contacts">
-    
     <div class="clearfix"></div>
     <div class="left">
-      1500 Pearl Street Ste 301<br>
-      Boulder, CO 80302<br>
-      USA
+      ул . Декабристов д. 6
     </div>
     <div class="na-right">
-      +7 495 <span>777 77 77</span>
+      +7 925 <span>27 66 651</span>
       <br>
       <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
     </div>

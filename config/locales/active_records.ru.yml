@@ -3,6 +3,16 @@ ru:
     dashboard: Общие
   activerecord:
     models:
+      message:
+        one: Сообщение
+        few: Сообщения
+        many: Сообщения
+        other: Сообщения
+      banner:
+        one: Банер
+        few: Банеры
+        many: Банеры
+        other: Банеры
       service_request:
         one: Услуга
         few: Услуги
@@ -55,6 +65,7 @@ ru:
         title: Название
         logo: Логотип
         created_at: Дата создания
+        description: Описание
       review:
         company_name: Название компании
         author: Автор
@@ -63,6 +74,12 @@ ru:
       static_page:
         permalink: Адресс страницы
         text1: Главный текст
+        title: Название страницы
+        keywords: Ключивые слова
+        description: Описание
+        image: Картинка для социальных сетей
+        banner: Банер
+        banner_image: Изображение
       our_service:
         service_category: Категория
         title: Название
@@ -84,3 +101,13 @@ ru:
         additionally: Дополнительные данные
         readed: Статус
         our_service: Название услуги
+      banner:
+        static_page: Страница
+        text: Текст
+        image: Картинка
+      message:
+        email: Email
+        name: Имя
+        phone: Телефон
+        text: Текст
+        

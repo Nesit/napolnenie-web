@@ -11,6 +11,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'client_side_validations'
 gem 'paperclip'
 gem 'devise-russian'
 gem 'activeadmin'
@@ -19,6 +20,7 @@ gem 'russian'
 gem 'unicorn'
 gem 'ffaker'
 gem 'will_paginate'
+gem 'exception_notification'
 
 group :development do
   gem 'sqlite3'
@@ -26,4 +28,6 @@ group :development do
   gem 'debugger'
   gem 'sextant'
   gem 'debugger'
+  gem 'quiet_assets'
+  gem 'letter_opener'
 end

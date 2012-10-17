@@ -80,6 +80,7 @@ $('#why-us .na-forms .na-button[data-to]')
       .css('z-index', 2)
       .siblings('.na-form')
       .css('z-index', 1)
+     $("form").validate()
   })
 
 $('#service nav .na-item')
