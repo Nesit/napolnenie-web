@@ -1,18 +1,17 @@
 <div id="na-main">
-
   <section id="slider">
     <div class="na-slider">
       <div class="na-slider-bg">
-        <img src="/assets/loader-1.png" alt="">
-        <img src="/assets/loader-2.png" alt="">
-        <img src="/assets/loader-3.png" alt="">
+	<img src="/assets/loader-1.png" alt="">
+	<img src="/assets/loader-2.png" alt="">
+	<img src="/assets/loader-3.png" alt="">
       </div>
       <div class="na-slider-prev"></div>
       <div class="na-slider-next"></div>
       <div class="na-inner">
-        <% StaticPage.find_page(:main).slider_photos.map.each do |photo| %>
-          <%= image_tag(photo.image.url(:medium)) %>
-        <% end %>
+	<% @page.banners.each do |banner| %>
+	  <%= image_tag(banner.image.url(:medium)) %>
+	<% end %>
       </div>
       <div class="slider_text">
 	<h2>Наша компания обладает уникальными инструментами</h2>
@@ -23,198 +22,194 @@
   </section>
 
   <section id="why-us">
-    <header>Почему именно мы?</header>
-    <div class="na-text">
-      Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева и оценить эффективность проведенных рекламных кампаний. Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева и оценить эффективность проведенных рекламных кампаний. Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева и оценить эффективность проведенных рекламных кампаний. Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева и оценить эффективность проведенных рекламных кампан
-      <span>NAPOLNENIE - <span>это</span></span>
-    </div>
+    <div class="na-text"><%== @page.text1 %></div>
     <div class="na-forms">
       <section class="na-form na-order" style="display: none">
-        <div class="na-inner">
-          <header>Заказать услугу</header>
-          <div class="na-button na-audit right" data-to="na-audit"></div>
-          <%= form_for ServiceRequest.new, url: '/receive_requests', remote: true, :html => {:class => 'form1'} do |f| %>
-            <table>
-              <tr>
-                <td>
-                  <div class="na-custom-select">
-                    <%= f.select :our_service_id, options_from_collection_for_select(OurService.all, :id, :title) %>
-                  </div>
-                </td>
-                <td rowspan="3">
-                  <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= f.text_field :name, :placeholder => "Ф.И.О." %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= f.text_field :phone, :placeholder => "Телефон" %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= f.email_field :email, :placeholder => "E-mail" %>
-                </td>
-                <td><button class="button1">Готово</button></td>
-              </tr>
-            </table>
-          <% end %>
-	<div class="form_message message1">Отлично, наши менеджеры сейчас свяжутся с Вами</div>
-        </div>
-      </section>
-      <section class="na-form na-audit" style="display: none">
-        <div class="na-inner">
-          <header>Бесплатный аудит</header>
-          <div class="na-button na-order left" data-to="na-order"></div>
-          <%= form_for AuditRequest.new, url: '/receive_requests', remote: true, :html => {:class => 'form2'} do |f| %>
-            <table>
-              <tr>
-                <td>
-		              <%= f.text_field :url, :placeholder => "Адрес сайта" %>
-                </td>
-                <td rowspan="3">
-		              <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-		              <%= f.email_field :email, :placeholder => "E-mail" %>
-		            </td>
-              </tr>
-              <tr>
-                <td>
-            		  <%= f.text_field :phone, :placeholder => "Телефон" %>
-            		</td>
-              </tr>
-              <tr>
-                <td colspan="2"><button class="button2">Готово</button></td>
-              </tr>
-            </table>
-          <% end %>
-	<div class="form_message message2">Наши аналитики изучат Ваш сайт и результат придет Вам по email</div>
-        </div>
-      </section>
-      <div class="na-buttons">
-        <div class="na-button na-order left" data-to="na-order">
-          <div class="na-hint">Заказать услугу</div>
-	  <div class="popap">Заказать услугу</div>
-        </div>
-        <div class="na-button na-audit right" data-to="na-audit">
-          <div class="na-hint">Бесплатный аудит сайта</div>
-	  <div class="popap">Бесплатный аудит сайта</div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </section>
+	<div class="na-inner">
+	  <header>Заказать услугу</header>
+	  <div class="na-button na-audit right" data-to="na-audit"></div>
+	  <%= form_for ServiceRequest.new, :url => '/receive_requests', :remote => true, :validate => true, :html => {:class => 'form1'} do |f| %>
+	  <table>
+	    <tr>
+	      <td>
+		<div class="na-custom-select">
+		  <%= f.select :our_service_id, options_from_collection_for_select(OurService.all, :id, :title) %>
+		</div>
+	      </td>
+	      <td rowspan="3">
+		<%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :name, :placeholder => "Ф.И.О." %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :phone, :placeholder => "Телефон" %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.email_field :email, :placeholder => "E-mail" %>
+	      </td>
+	      <td><button class="button1">Готово</button></td>
+	    </tr>
+	  </table>
+<% end %>
+<div class="form_message message1">Отлично, наши менеджеры сейчас свяжутся с Вами</div>
+</div>
+</section>
+<section class="na-form na-audit" style="display: none">
+  <div class="na-inner">
+    <header>Бесплатный аудит</header>
+    <div class="na-button na-order left" data-to="na-order"></div>
+    <%= form_for AuditRequest.new, :url => '/receive_requests', :remote => true, :validate => true, :html => {:class => 'form2'} do |f| %>
+    <table>
+      <tr>
+	<td>
+	  <%= f.text_field :url, :placeholder => "Адрес сайта" %>
+	</td>
+	<td rowspan="3">
+	  <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.email_field :email, :placeholder => "E-mail", :validate => true %>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <%= f.text_field :phone, :placeholder => "Телефон" %>
+	</td>
+      </tr>
+      <tr>
+	<td colspan="2"><button class="button2">Готово</button></td>
+      </tr>
+    </table>
+<% end %>
+<div class="form_message message2">Наши аналитики изучат Ваш сайт и результат придет Вам по email</div>
+</div>
+</section>
+<div class="na-buttons">
+  <div class="na-button na-order left" data-to="na-order">
+    <div class="na-hint">Заказать услугу</div>
+    <div class="popap">Заказать услугу</div>
+  </div>
+  <div class="na-button na-audit right" data-to="na-audit">
+    <div class="na-hint">Бесплатный аудит сайта</div>
+    <div class="popap">Бесплатный аудит сайта</div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+</div>
+</section>
 
-  <section id="service">
-    <header>Услуги</header>
-    <div class="na-parallax-wrapper">
-      <div class="na-shadow-top"><div class="na-shadow"><div></div></div></div>
-      <div class="na-shadow-bottom"><div class="na-shadow"><div></div></div></div>
+<section id="service">
+  <header>Услуги</header>
+  <div class="na-parallax-wrapper">
+    <div class="na-shadow-top"><div class="na-shadow"><div></div></div></div>
+    <div class="na-shadow-bottom"><div class="na-shadow"><div></div></div></div>
 
-      <div class="na-parallax back"></div>
-      <div class="na-cover"></div>
-      <div class="na-parallax front"></div>
-      <nav>
+    <div class="na-parallax back"></div>
+    <div class="na-cover"></div>
+    <div class="na-parallax front"></div>
+    <nav>
 
-        <% ServiceCategory.order('position ASC').each do |category| %>
-          <div class="na-item circle-<%= category.id %>">
-            <span><%= category.title %></span>
-            <div class="na-hint"><%== category.description %></div>
-            <% category.our_services.each_with_index do |service,i| %>
-              <a href="#" class="circle-<%= i %>"><span><%= service.title %></span></a>
-            <% end %>
-          </div>
-        <% end %>
-
-	<div class="na-item circle-2 active">
-            <span>Наполнение</span>
-            <div class="jjj">    
-	        <div class="na-hint">AAAAAAAA</div>
-	    </div>
-            <a href="#" class="circle-0">
-		<span>Товарных Позиций</span>
-		<div class="na-hint_small">ббббббб</div>
-	    </a>
-            <a href="#" class="circle-1">
-		<span>Удаленный Контент-Менеджмент</span>
-		<div class="na-hint_small">Велосипед</div>
-	    </a>
-         </div>
-
-	<div class="na-item circle-2">
-            <div class="ddd">
-		<div class="na-hint">ccccccccccc</div>
-	    </div>
-	    <span>Наполнение</span>
-            <div class="jjj">    
-	        <div class="na-hint">AAAAAAAA</div>
-	    </div>
-            <a href="#" class="circle-0">
-		<span>Товарных Позиций</span>
-		<div class="na-hint_small">ббббббб</div>
-	    </a>
-            <a href="#" class="circle-1">
-		<span>Удаленный Контент-Менеджмент</span>
-		<div class="na-hint_small">Велосипед</div>
-	    </a>
-         </div>
-	
-
-        <a href="/press_releases" class="na-item press">
-          <span>Пресс-релизы</span>
-          <div class="na-hint">
-		<div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
-		</div>		
+      <% ServiceCategory.order('position ASC').each do |category| %>
+	<div class="na-item circle-<%= category.id %>">
+	  <span><%= category.title %></span>
+	  <div class="na-hint"><%== category.description %></div>
+	  <% category.our_services.each_with_index do |service,i| %>
+	    <a href="#" class="circle-<%= i %>"><span><%= service.title %></span></a>
+	  <% end %>
 	</div>
-        </a>
-      </nav>
+      <% end %>
 
-    </div>
-  </section>
-
-  <section id="clients">
-    <header>Наши клиенты</header>
-    <div class="na-slider">
-      <div class="na-slider-bg">
-        <img src="/assets/loader-1.png" alt="">
-        <img src="/assets/loader-2.png" alt="">
-        <img src="/assets/loader-3.png" alt="">
+      <div class="na-item circle-2 active">
+	<span>Наполнение</span>
+	<div class="jjj">
+	  <div class="na-hint">AAAAAAAA</div>
+	</div>
+	<a href="#" class="circle-0">
+	  <span>Товарных Позиций</span>
+	  <div class="na-hint_small">ббббббб</div>
+	</a>
+	<a href="#" class="circle-1">
+	  <span>Удаленный Контент-Менеджмент</span>
+	  <div class="na-hint_small">Велосипед</div>
+	</a>
       </div>
-      <div class="na-slider-prev"></div>
-      <div class="na-slider-next"></div>
-      <div class="na-inner">
-    	  <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
-          <div>
-    	    <% clients.each do |client| %>
-  	        <div class="na-item"><span><%= image_tag client.logo %></span>
-			<div class="na-hint">Клиент!</div></div>
-          <% end %>
-    	    </div>
-    	  <% end %>
+
+      <div class="na-item circle-2">
+	<div class="ddd">
+	  <div class="na-hint">ccccccccccc</div>
+	</div>
+	<span>Наполнение</span>
+	<div class="jjj">
+	  <div class="na-hint">AAAAAAAA</div>
+	</div>
+	<a href="#" class="circle-0">
+	  <span>Товарных Позиций</span>
+	  <div class="na-hint_small">ббббббб</div>
+	</a>
+	<a href="#" class="circle-1">
+	  <span>Удаленный Контент-Менеджмент</span>
+	  <div class="na-hint_small">Велосипед</div>
+	</a>
       </div>
+
+
+      <a href="/press_releases" class="na-item press">
+	<span>Пресс-релизы</span>
+	<div class="na-hint">
+	  <div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
+	  </div>
+	</div>
+      </a>
+    </nav>
+
+  </div>
+</section>
+
+<section id="clients">
+  <header>Наши клиенты</header>
+  <div class="na-slider">
+    <div class="na-slider-bg">
+      <img src="/assets/loader-1.png" alt="">
+      <img src="/assets/loader-2.png" alt="">
+      <img src="/assets/loader-3.png" alt="">
     </div>
-  </section>
-
-  <section id="responses" name="resres">
-    <header><span>Отзывы о сотрудничестве</span></header>
-
-    <div class="na-parallax-wrapper">
-      <div class="na-parallax back"></div>
-      <div class="na-cover"></div>
-      <div class="na-parallax front"></div>
+    <div class="na-slider-prev"></div>
+    <div class="na-slider-next"></div>
+    <div class="na-inner">
+      <% OurClient.all.in_groups_of(15,false).reverse.each do |clients|  %>
+	<div>
+	  <% clients.each do |client| %>
+	    <div class="na-item"><span><%= image_tag client.logo %></span>
+	      <div class="na-hint">Клиент!</div></div>
+	  <% end %>
+	</div>
+      <% end %>
     </div>
+  </div>
+</section>
 
-    <div class="na-tree" id="timeline">
-    </div>
+<section id="responses" name="resres">
+  <header><span>Отзывы о сотрудничестве</span></header>
 
-    <div id="na-responses-tree-more">больше</div>
+  <div class="na-parallax-wrapper">
+    <div class="na-parallax back"></div>
+    <div class="na-cover"></div>
+    <div class="na-parallax front"></div>
+  </div>
+
+  <div class="na-tree" id="timeline">
+  </div>
+
+  <div id="na-responses-tree-more">больше</div>
 </div>
 
 <div class="hidden">
@@ -235,11 +230,11 @@
   <div class="review_structure">
     <div class="na-item response new">
       <div>
-        <div class="na-inner">
-          <div class="na-name"></div>
-          <div class="na-company"></div>
-          <div class="na-text"></div>
-        </div>
+	<div class="na-inner">
+	  <div class="na-name"></div>
+	  <div class="na-company"></div>
+	  <div class="na-text"></div>
+	</div>
       </div>
     </div>
   </div>
@@ -249,68 +244,69 @@
 <footer id="contacts">
   <a href="#" id="na-top"></a>
   <nav class="na-social">
-    <a href="#" class="facebook"></a>
-    <a href="#" class="vk"></a>
-    <a href="#" class="twitter"></a>
+    <% url = "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
+    <a href="http://www.facebook.com/sharer.php?u=<%= url %>" target="_blank" class="facebook"></a>
+    <a href="http://vkontakte.ru/share.php?url=<%= url %>" target="_blank" class="vk"></a>
+    <a href="http://twitter.com/home?status=<%= url %>" target="_blank" class="twitter"></a>
     <a href="#whywhy" class="mail"></a>
-    <a href="#" class="gplus"></a>
-    <a href="#" class="odnoklassniki"></a>
-    <a href="#" class="mailru"></a>
-  <section class="na-mail" name="mail_mess" >
-        <div class="na-inner">
-          <header>Отправить письмо</header>
-         
-          <form accept-charset="UTF-8" action="/receive_requests" class="form3" data-remote="true" id="new_audit_request" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="+zW8/jSNwsRvDZezBI10WjSJcLe2VyEhETfEz39arWU="></div>
-            <table>
-              <tbody><tr>
-                <td>
-		              <input id="audit_request_url" name="audit_request[url]" placeholder="Ф.И.О." size="30" type="text">
-                </td>
-                <td rowspan="3">
-		              <textarea cols="40" id="audit_request_additionally" name="audit_request[additionally]" placeholder="Сообщение" rows="20"></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td>
-		              <input id="audit_request_email" name="audit_request[email]" placeholder="E-mail" size="30" type="email">
-		            </td>
-              </tr>
-              <tr>
-                <td>
-            		  <input id="audit_request_phone" name="audit_request[phone]" placeholder="Телефон" size="30" type="text">
-            		</td>
-              </tr>
-              <tr>
-                <td colspan="2"><button class="button3">Готово</button></td>
-              </tr>
-            </tbody></table>
-</form>	<div class="form_message message3">Благодарим за то, что связались с нами</div>
-        </div>
-      </section>
-
-</nav>
-	
-
-
+    <a href="https://plus.google.com/share?url=<%= url %>" target="_blank" class="gplus"></a>
+    <a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=<%= url %>" target="_blank" class="odnoklassniki"></a>
+    <a href="http://connect.mail.ru/share?share_url=<%= url %>" target="_blank" class="mailru"></a>
+    <section class="na-mail" name="mail_mess" >
+      <div class="na-inner">
+	<header>Отправить письмо</header>
+	<form accept-charset="UTF-8" action="/receive_requests" class="form3" data-remote="true" id="new_audit_request" method="post">
+	  <div style="margin:0;padding:0;display:inline">
+	    <input name="utf8" type="hidden" value="✓">
+	    <input name="authenticity_token" type="hidden" value="+zW8/jSNwsRvDZezBI10WjSJcLe2VyEhETfEz39arWU=">
+	  </div>
+	  <table>
+	    <tbody>
+	      <tr>
+		<td>
+		  <input id="audit_request_url" name="audit_request[url]" placeholder="Ф.И.О." size="30" type="text">
+		</td>
+		<td rowspan="3">
+		  <textarea cols="40" id="audit_request_additionally" name="audit_request[additionally]" placeholder="Сообщение" rows="20"></textarea>
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <input id="audit_request_email" name="audit_request[email]" placeholder="E-mail" size="30" type="email">
+		</td>
+	      </tr>
+	      <tr>
+		<td>
+		  <input id="audit_request_phone" name="audit_request[phone]" placeholder="Телефон" size="30" type="text">
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan="2"><button class="button3">Готово</button></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</form>
+	<div class="form_message message3">Благодарим за то, что связались с нами</div>
+      </div>
+    </section>
+  </nav>
   <section class="na-payment" name="_pay">
     <header>Мы принимаем</header>
     <div class="na-list">
-      <a href="#" class="qiwi"></a>
-      <a href="#" class="webmoney"></a>
-      <a href="#" class="yandex-money"></a>
-      <a href="#" class="sberbank" name="whywhy"></a>
+      <a href="/payments" class="qiwi"></a>
+      <a href="/payments" class="webmoney"></a>
+      <a href="/payments" class="yandex-money"></a>
+      <a href="/payments" class="sberbank" name="whywhy"></a>
     </div>
   </section>
   <section class="na-contacts">
     <header>Контакты</header>
     <div class="clearfix"></div>
     <div class="left">
-      1500 Pearl Street Ste 301<br>
-      Boulder, CO 80302<br>
-      USA
+      ул . Декабристов д. 6
     </div>
     <div class="na-right">
-      +7 495 <span>777 77 77</span>
+      +7 925 <span>27 66 651</span>
       <br>
       <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
     </div>

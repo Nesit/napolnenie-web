@@ -2,13 +2,15 @@ NapolnenieWeb::Application.routes.draw do
   # Admin panel
   namespace :admin do
     resources :static_pages do
-      delete :destroy_slider_photo, :on => :collection
+      post :add_banner, :on => :collection
     end
   end
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :services, only: :show
 
   match "/reviews" => "reviews#show"
   match "/receive_requests" => "receive_requests#receive", via: :post

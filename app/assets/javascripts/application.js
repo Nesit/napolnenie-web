@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require rails.validations
+//= require main
+//= require plugins
+//= require smoothscroll
+//= require style-select
+//= require timeline.js.coffee
+

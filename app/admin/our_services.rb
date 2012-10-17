@@ -11,4 +11,13 @@ ActiveAdmin.register OurService do
     end
     default_actions
   end
+
+  form do |f|
+    f.inputs 'Основное' do
+      f.input :service_category
+      f.input :title
+      f.input :text, as: :html_editor
+    end
+    f.buttons
+  end
 end

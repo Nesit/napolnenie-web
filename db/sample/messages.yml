@@ -1,0 +1,7 @@
+<% 30.times.each do |i| %>
+message_<%= i %>:
+  name: <%= Faker::Name.name %>
+  email: <%= Faker::Internet.email %>
+  phone: <%= Faker::PhoneNumber.phone_number %>
+  text: <%= Faker::Lorem.paragraphs.join('\n') %>
+<% end %>

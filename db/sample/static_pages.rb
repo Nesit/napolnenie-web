@@ -1,2 +1,7 @@
-main_page = StaticPage.find_by_permalink('main')
-main_page.update_attribute(:text1, Faker::HTMLIpsum.fancy_string(10, true))
+FileUtils.rm_rf Rails.root.join('public/system/static_pages')
+
+images = Dir.glob(Rails.root.join('db/sample/files/pandas', '*'))
+
+StaticPage.all.each do |page|
+  page.update_attribute(:image, File.new(images.sample))
+end
