@@ -1,7 +1,7 @@
 <div id="na-main">
 
   <%= render 'shared/page_slider', page: @page %>
-  
+
   <section id="why-us">
     <div class="na-text"><%== @page.text1 %></div>
     <div class="na-forms">
@@ -104,53 +104,23 @@
 	  <span><%= category.title %></span>
 	  <div class="na-hint"><%== category.description %></div>
 	  <% category.our_services.each_with_index do |service,i| %>
-	    <a href="#" class="circle-<%= i %>"><span><%= service.title %></span></a>
+	    <%= link_to service_path(service), class: "circle-#{i}" do %>
+              <span><%= service.title %></span>
+	    <% end %>
 	  <% end %>
 	</div>
       <% end %>
 
-
-	<div class="na-item circle-2 active">
-            <div class="hint_big">
-		<div class="na-hint"><div class="hint_text">Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посеваНаша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева</div></div>
-	    </div>
-	    <span>Наполнение</span>
-            <a href="#" class="circle-0">
-		<span>Товарных Позиций</span>
-		<div class="na-hint_small"><div class="hint_text">бббббббббббббббббббб</div></div>
-	    </a>
-            <a href="#" class="circle-1">
-		<span>Удаленный Контент-Менеджмент</span>
-		<div class="na-hint_small"><div class="hint_text">Велосипедвелосипед</div></div>
-	    </a>
-         </div>
-
-	
-	
-
-        <a href="/press_releases" class="na-item press">
-          <span>Пресс-релизы</span>
-	<div class="hint_big">
-          <div class="na-hint">
-		<div class="hint_text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
-		</div>
-	  </div> 		
-
+      <a href="/press_releases" class="na-item press">
+	<span>Пресс-релизы</span>
+	<div class="na-hint">
+	  <div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
+	  </div>
 	</div>
-
       </a>
     </nav>
 
-    <a href="/press_releases" class="na-item press">
-      <span>Пресс-релизы</span>
-      <div class="na-hint">
-	<div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
-	</div>
-      </div>
-    </a>
-</nav>
-
-</div>
+  </div>
 </section>
 
 <section id="clients">
