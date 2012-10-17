@@ -7,4 +7,9 @@ class ReceiveRequestsController < ApplicationController
     end
     render text: 'ok'
   end
+
+  def receive_message
+    Message.create(params[:message])
+    render text: 'ok'
+  end
 end

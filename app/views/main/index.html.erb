@@ -226,60 +226,56 @@
     <section class="na-mail" name="mail_mess" >
       <div class="na-inner">
 	<header>Отправить письмо</header>
-	<form accept-charset="UTF-8" action="/receive_requests" class="form3" data-remote="true" id="new_audit_request" method="post">
-	  <div style="margin:0;padding:0;display:inline">
-	    <input name="utf8" type="hidden" value="✓">
-	    <input name="authenticity_token" type="hidden" value="+zW8/jSNwsRvDZezBI10WjSJcLe2VyEhETfEz39arWU=">
-	  </div>
-	  <table>
-	    <tbody>
-	      <tr>
-		<td>
-		  <input id="audit_request_url" name="audit_request[url]" placeholder="Ф.И.О." size="30" type="text">
-		</td>
-		<td rowspan="3">
-		  <textarea cols="40" id="audit_request_additionally" name="audit_request[additionally]" placeholder="Сообщение" rows="20"></textarea>
-		</td>
-	      </tr>
-	      <tr>
-		<td>
-		  <input id="audit_request_email" name="audit_request[email]" placeholder="E-mail" size="30" type="email">
-		</td>
-	      </tr>
-	      <tr>
-		<td>
-		  <input id="audit_request_phone" name="audit_request[phone]" placeholder="Телефон" size="30" type="text">
-		</td>
-	      </tr>
-	      <tr>
-		<td colspan="2"><button class="button3">Готово</button></td>
-	      </tr>
-	    </tbody>
-	  </table>
-	</form>
-	<div class="form_message message3">Благодарим за то, что связались с нами</div>
-      </div>
-    </section>
-  </nav>
-  <section class="na-payment" name="_pay">
-    <header>Мы принимаем</header>
-    <div class="na-list">
-      <a href="/payments" class="qiwi"></a>
-      <a href="/payments" class="webmoney"></a>
-      <a href="/payments" class="yandex-money"></a>
-      <a href="/payments" class="sberbank" name="whywhy"></a>
-    </div>
-  </section>
-  <section class="na-contacts">
-    <header>Контакты</header>
-    <div class="clearfix"></div>
-    <div class="left">
-      ул . Декабристов д. 6
-    </div>
-    <div class="na-right">
-      +7 925 <span>27 66 651</span>
-      <br>
-      <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
-    </div>
-  </section>
+	<%= form_for Message.new, :url => '/receive_message', :remote => true, :validate => true, :html => {:class => 'form3'} do |f| %>
+	<table>
+	  <tbody>
+	    <tr>
+	      <td>
+		<%= f.text_field :name, placeholder: 'Ф.И.О.', size: 30 %>
+	      </td>
+	      <td rowspan="3">
+		<%= f.text_area :text, placeholder: 'Сообщение' %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :email, placeholder: 'E-mail' %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :phone, placeholder: 'Телефон' %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td colspan="2"><button class="button3">Готово</button></td>
+	    </tr>
+	  </tbody>
+	</table>
+<% end %>
+<div class="form_message message3">Благодарим за то, что связались с нами</div>
+</div>
+</section>
+</nav>
+<section class="na-payment" name="_pay">
+  <header>Мы принимаем</header>
+  <div class="na-list">
+    <a href="/payments" class="qiwi"></a>
+    <a href="/payments" class="webmoney"></a>
+    <a href="/payments" class="yandex-money"></a>
+    <a href="/payments" class="sberbank" name="whywhy"></a>
+  </div>
+</section>
+<section class="na-contacts">
+  <header>Контакты</header>
+  <div class="clearfix"></div>
+  <div class="left">
+    ул . Декабристов д. 6
+  </div>
+  <div class="na-right">
+    +7 925 <span>27 66 651</span>
+    <br>
+    <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
+  </div>
+</section>
 </footer>
