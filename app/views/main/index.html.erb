@@ -1,25 +1,7 @@
 <div id="na-main">
-  <section id="slider">
-    <div class="na-slider">
-      <div class="na-slider-bg">
-	<img src="/assets/loader-1.png" alt="">
-	<img src="/assets/loader-2.png" alt="">
-	<img src="/assets/loader-3.png" alt="">
-      </div>
-      <div class="na-slider-prev"></div>
-      <div class="na-slider-next"></div>
-      <div class="na-inner">
-	<% @page.banners.each do |banner| %>
-	  <%= image_tag(banner.image.url(:medium)) %>
-	  <div class="slider_text">
-	    <%== banner.text %>
-	  </div>
-	<% end %>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-  </section>
 
+  <%= render 'shared/page_slider', page: @page %>
+  
   <section id="why-us">
     <div class="na-text"><%== @page.text1 %></div>
     <div class="na-forms">
@@ -36,22 +18,22 @@
 		</div>
 	      </td>
 	      <td rowspan="3">
-		<%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+		<%= f.text_area :additionally, :placeholder => "Дополнительно", tabindex: 4 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :name, :placeholder => "Ф.И.О." %>
+		<%= f.text_field :name, :placeholder => "Ф.И.О.", tabindex: 1 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :phone, :placeholder => "Телефон" %>
+		<%= f.text_field :phone, :placeholder => "Телефон", tabindex: 2 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.email_field :email, :placeholder => "E-mail" %>
+		<%= f.email_field :email, :placeholder => "E-mail", tabindex: 3 %>
 	      </td>
 	      <td><button class="button1">Готово</button></td>
 	    </tr>
@@ -68,20 +50,20 @@
     <table>
       <tr>
 	<td>
-	  <%= f.text_field :url, :placeholder => "Адрес сайта" %>
+	  <%= f.text_field :url, :placeholder => "Адрес сайта", :tabindex => 1 %>
 	</td>
 	<td rowspan="3">
-	  <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+	  <%= f.text_area :additionally, :placeholder => "Дополнительно", :tabindex => 4 %>
 	</td>
       </tr>
       <tr>
 	<td>
-	  <%= f.email_field :email, :placeholder => "E-mail", :validate => true %>
+	  <%= f.email_field :email, :placeholder => "E-mail", :tabindex => 2 %>
 	</td>
       </tr>
       <tr>
 	<td>
-	  <%= f.text_field :phone, :placeholder => "Телефон" %>
+	  <%= f.text_field :phone, :placeholder => "Телефон", :tabindex => 3 %>
 	</td>
       </tr>
       <tr>
@@ -231,20 +213,20 @@
 	  <tbody>
 	    <tr>
 	      <td>
-		<%= f.text_field :name, placeholder: 'Ф.И.О.', size: 30 %>
+		<%= f.text_field :name, placeholder: 'Ф.И.О.', size: 30, tabindex: 1 %>
 	      </td>
 	      <td rowspan="3">
-		<%= f.text_area :text, placeholder: 'Сообщение' %>
+		<%= f.text_area :text, placeholder: 'Сообщение', tabindex: 4 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :email, placeholder: 'E-mail' %>
+		<%= f.text_field :email, placeholder: 'E-mail', tabindex: 2 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :phone, placeholder: 'Телефон' %>
+		<%= f.text_field :phone, placeholder: 'Телефон', tabindex: 3 %>
 	      </td>
 	    </tr>
 	    <tr>

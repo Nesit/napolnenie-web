@@ -1,0 +1,20 @@
+<section id="slider">
+  <div class="na-slider">
+    <div class="na-slider-bg">
+      <img src="/assets/loader-1.png" alt="">
+      <img src="/assets/loader-2.png" alt="">
+      <img src="/assets/loader-3.png" alt="">
+    </div>
+    <div class="na-slider-prev"></div>
+    <div class="na-slider-next"></div>
+    <div class="na-inner">
+      <% page.banners.each do |banner| %>
+	<%= image_tag(banner.image.url(:medium)) %>
+	<div class="slider_text">
+	  <%== banner.text %>
+	</div>
+      <% end %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</section>
