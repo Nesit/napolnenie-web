@@ -1,5 +1,3 @@
 napolnenie-web
 ==============
-AAA
-BBB
-CCC
+bbbb
