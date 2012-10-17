@@ -22,7 +22,7 @@ $('footer .na-social .mail').click(function() {
 
 $(window).scroll(function() {
   if (($(window).scrollTop() > 500) && !($('#why-us .na-forms .na-button .popap').hasClass('shown'))) {
-   $('#why-us .na-forms .na-button .popap').fadeIn(100).delay(5000).fadeOut(100);
+   $('#why-us .na-forms .na-button .popap').fadeIn(100).delay(4000).fadeOut(100);
    $('#why-us .na-forms .na-button .popap').addClass('shown');
   }
  })

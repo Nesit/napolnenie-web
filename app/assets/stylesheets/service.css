@@ -132,13 +132,29 @@
 	       top: 19px;     
 	    }
 
-	#service nav .na-item.circle-2 .ddd
+	#service nav .na-item.circle-2 .hint_big
             {
                position: absolute;
-	       width: 240px;
-	       height: 240px;
-	       left: 30px;
-	       top: 30px;     
+	       width: 270px;
+	       height: 270px;
+	       left: 15px;
+	       top: 15px;     
+	    }
+        #service nav .na-item.circle-1 .hint_big
+            {
+               position: absolute;
+	       width: 270px;
+	       height: 270px;
+	       left: 15px;
+	       top: 15px;     
+	    }
+	#service nav .na-item.press .hint_big
+            {
+               position: absolute;
+	       width: 270px;
+	       height: 270px;
+	       left: 15px;
+	       top: 15px;     
 	    }	
 
           #service nav .na-item.circle-3 > span
@@ -211,9 +227,9 @@
         box-sizing: border-box;
         width: 217px;
         height: 217px;
-        padding: 50px 30px 50px 45px;
+        padding: 50px 30px 50px 30px;
         line-height: normal;
-        text-align: left;
+        text-align: center;
         font: normal 50% Arial, Helvetica, sans-serif;
         color: #999;
         background: url(/assets/hint.png) no-repeat;
@@ -228,14 +244,14 @@
         opacity: 0;
         position: absolute;
         z-index: 1;
-        top: -80px;
-        left: -100px;
+        top: -13px;
+        left: -12px;
         box-sizing: border-box;
-        width: 217px;
-        height: 217px;
-        padding: 50px 30px 50px 45px;
+        width: 108px;
+        height: 108px;
+        padding: 50px 20px 50px 15px;
         line-height: normal;
-        text-align: left;
+        text-align: center;
         font: normal 50% Arial, Helvetica, sans-serif;
         color: #999;
         background: url(/assets/hint-small.png) no-repeat;
@@ -245,7 +261,7 @@
         transition: opacity 0.3s ease;
       }
 
-	#service nav .na-item .na-hint .text
+	.hint_text
 	{overflow: hidden;
 	height: 110px;
 	}
@@ -260,7 +276,7 @@
         {
           opacity: 1;
         }
-	#service nav .ddd:hover .na-hint
+	#service nav .hint_big:hover .na-hint
         {
           opacity: 1;
         }
@@ -273,4 +289,11 @@
         {
           opacity: 1;
         }
-	
+	#service nav .circle-0:hover .na-hint_small
+        {
+          opacity: 1;
+        }
+	#service nav .circle-1:hover .na-hint_small
+        {
+          opacity: 1;
+        }
