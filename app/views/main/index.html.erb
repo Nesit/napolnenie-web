@@ -104,6 +104,7 @@
 	  <span><%= category.title %></span>
 	  <div class="na-hint"><%== category.description %></div>
 	  <% category.our_services.each_with_index do |service,i| %>
+    
 	    <%= link_to service_path(service), class: "circle-#{i}" do %>
               <span><%= service.title %></span>
 	    <% end %>
