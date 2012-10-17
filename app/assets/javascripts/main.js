@@ -1,5 +1,32 @@
 (function($){$(document).ready(function(){
 
+$('#why-us .na-forms .na-form .na-inner form button.button1').click(function() {
+		$('#why-us .na-forms .na-form .na-inner form.form1').hide();
+		$('#why-us .form_message.message1').show();
+ })
+
+$('#why-us .na-forms .na-form .na-inner form button.button2').click(function() {
+		$('#why-us .na-forms .na-form .na-inner form.form2').hide();
+		$('#why-us .form_message.message2').show();
+ })
+
+$('.na-mail .na-inner form button.button3').click(function() {
+		$('.na-mail .na-inner form.form3').hide();
+		$('.na-inner .form_message.message3').show();
+ })
+$('footer .na-social .mail').click(function() {
+		$('').hide();
+		$('.na-mail').show();
+ })
+
+
+$(window).scroll(function() {
+  if (($(window).scrollTop() > 500) && !($('#why-us .na-forms .na-button .popap').hasClass('shown'))) {
+   $('#why-us .na-forms .na-button .popap').fadeIn(100).delay(5000).fadeOut(100);
+   $('#why-us .na-forms .na-button .popap').addClass('shown');
+  }
+ })
+
 $('#na-nav a')
   .click(function(e)
   {

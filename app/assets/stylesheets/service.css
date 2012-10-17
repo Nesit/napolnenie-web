@@ -93,6 +93,9 @@
       border: 1px solid #c8c8c8;
       border-radius: 150px;
     }
+
+   
+	
       #service nav .na-item:last-child 
       {
         margin-right: 0;
@@ -120,6 +123,23 @@
             {
               font-size: 80%;
             }
+	 #service nav .na-item.circle-2.active .jjj
+            {
+               position: absolute;
+	       width: 165px;
+	       height: 165px;
+	       left: 19px;
+	       top: 19px;     
+	    }
+
+	#service nav .na-item.circle-2 .ddd
+            {
+               position: absolute;
+	       width: 240px;
+	       height: 240px;
+	       left: 30px;
+	       top: 30px;     
+	    }	
 
           #service nav .na-item.circle-3 > span
           {
@@ -145,6 +165,10 @@
           border-radius: 105px;          
         }
 
+	  
+       
+
+
       #service nav .na-item.active 
       {
         width: 210px;
@@ -164,6 +188,8 @@
           text-decoration: none;
           color: #616765;
         }
+
+	
           #service nav .na-item.active a.circle-0 { left : -115px }
           #service nav .na-item.active a.circle-1 { right: -115px }
 
@@ -174,6 +200,7 @@
             line-height: normal;
           }
 
+	  
       #service nav .na-item .na-hint
       {
         opacity: 0;
@@ -195,13 +222,55 @@
          -o-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease;
       }
+
+	#service nav .na-item .na-hint_small
+      {
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        top: -80px;
+        left: -100px;
+        box-sizing: border-box;
+        width: 217px;
+        height: 217px;
+        padding: 50px 30px 50px 45px;
+        line-height: normal;
+        text-align: left;
+        font: normal 50% Arial, Helvetica, sans-serif;
+        color: #999;
+        background: url(/assets/hint-small.png) no-repeat;
+         -webkit-transition: opacity 0.3s ease;
+         -moz-transition: opacity 0.3s ease;
+         -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
+
+	#service nav .na-item .na-hint .text
+	{overflow: hidden;
+	height: 110px;
+	}
+	
         #service nav .na-item.active .na-hint 
         {
           top: -120px;
           left: -140px;
         }
 
-        #service nav .na-item:hover .na-hint
+        #service nav .jjj:hover .na-hint
         {
           opacity: 1;
         }
+	#service nav .ddd:hover .na-hint
+        {
+          opacity: 1;
+        }
+
+	#service nav .circle-0:hover .na-hint
+        {
+          opacity: 1;
+        }
+	#service nav .circle-1:hover .na-hint
+        {
+          opacity: 1;
+        }
+	
