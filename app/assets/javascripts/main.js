@@ -1,14 +1,14 @@
 (function($){$(document).ready(function(){
 
-$('#why-us .na-forms .na-form .na-inner form button.button1').click(function() {
+$('#new_service_request').submit(function() {
 		$('#why-us .na-forms .na-form .na-inner form.form1').hide();
 		$('#why-us .form_message.message1').show();
- })
+});
 
-$('#why-us .na-forms .na-form .na-inner form button.button2').click(function() {
+$('#new_audit_request').submit(function() {
 		$('#why-us .na-forms .na-form .na-inner form.form2').hide();
 		$('#why-us .form_message.message2').show();
- })
+});
 
 $('.na-mail .na-inner form button.button3').click(function() {
 		$('.na-mail .na-inner form.form3').hide();
