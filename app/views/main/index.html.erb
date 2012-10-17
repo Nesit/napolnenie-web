@@ -1,26 +1,7 @@
 <div id="na-main">
-  <section id="slider">
-    <div class="na-slider">
-      <div class="na-slider-bg">
-	<img src="/assets/loader-1.png" alt="">
-	<img src="/assets/loader-2.png" alt="">
-	<img src="/assets/loader-3.png" alt="">
-      </div>
-      <div class="na-slider-prev"></div>
-      <div class="na-slider-next"></div>
-      <div class="na-inner">
-	<% @page.banners.each do |banner| %>
-	  <%= image_tag(banner.image.url(:medium)) %>
-	<% end %>
-      </div>
-      <div class="slider_text">
-	<h2>Наша компания обладает уникальными инструментами</h2>
-	<p>которые позволяют успешно таргетировать аудиторию для вирусного посева и оценить эффективность проведенных рекламных кампаний.</p>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-  </section>
 
+  <%= render 'shared/page_slider', page: @page %>
+  
   <section id="why-us">
     <div class="na-text"><%== @page.text1 %></div>
     <div class="na-forms">
@@ -37,22 +18,22 @@
 		</div>
 	      </td>
 	      <td rowspan="3">
-		<%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+		<%= f.text_area :additionally, :placeholder => "Дополнительно", tabindex: 4 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :name, :placeholder => "Ф.И.О." %>
+		<%= f.text_field :name, :placeholder => "Ф.И.О.", tabindex: 1 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.text_field :phone, :placeholder => "Телефон" %>
+		<%= f.text_field :phone, :placeholder => "Телефон", tabindex: 2 %>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td>
-		<%= f.email_field :email, :placeholder => "E-mail" %>
+		<%= f.email_field :email, :placeholder => "E-mail", tabindex: 3 %>
 	      </td>
 	      <td><button class="button1">Готово</button></td>
 	    </tr>
@@ -69,20 +50,20 @@
     <table>
       <tr>
 	<td>
-	  <%= f.text_field :url, :placeholder => "Адрес сайта" %>
+	  <%= f.text_field :url, :placeholder => "Адрес сайта", :tabindex => 1 %>
 	</td>
 	<td rowspan="3">
-	  <%= f.text_area :additionally, :placeholder => "Дополнительно" %>
+	  <%= f.text_area :additionally, :placeholder => "Дополнительно", :tabindex => 4 %>
 	</td>
       </tr>
       <tr>
 	<td>
-	  <%= f.email_field :email, :placeholder => "E-mail", :validate => true %>
+	  <%= f.email_field :email, :placeholder => "E-mail", :tabindex => 2 %>
 	</td>
       </tr>
       <tr>
 	<td>
-	  <%= f.text_field :phone, :placeholder => "Телефон" %>
+	  <%= f.text_field :phone, :placeholder => "Телефон", :tabindex => 3 %>
 	</td>
       </tr>
       <tr>
@@ -128,6 +109,7 @@
 	</div>
       <% end %>
 
+
 	<div class="na-item circle-2 active">
             <div class="hint_big">
 		<div class="na-hint"><div class="hint_text">Наша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посеваНаша компания обладает уникальными инструментами, которые позволяют успешно таргетировать аудиторию для вирусного посева</div></div>
@@ -155,10 +137,20 @@
 	  </div> 		
 
 	</div>
+
       </a>
     </nav>
 
-  </div>
+    <a href="/press_releases" class="na-item press">
+      <span>Пресс-релизы</span>
+      <div class="na-hint">
+	<div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
+	</div>
+      </div>
+    </a>
+</nav>
+
+</div>
 </section>
 
 <section id="clients">
@@ -176,7 +168,7 @@
 	<div>
 	  <% clients.each do |client| %>
 	    <div class="na-item"><span><%= image_tag client.logo %></span>
-	      <div class="na-hint">Клиент!</div></div>
+	      <div class="na-hint"><%= client.title %></div></div>
 	  <% end %>
 	</div>
       <% end %>
@@ -232,69 +224,68 @@
   <a href="#" id="na-top"></a>
   <nav class="na-social">
 
-    <a href="#" class="facebook"></a>
-    <a href="#" class="vk"></a>
-    <a href="#" class="twitter"></a>
+    <% url = "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
+    <a href="http://www.facebook.com/sharer.php?u=<%= url %>" target="_blank" class="facebook"></a>
+    <a href="http://vkontakte.ru/share.php?url=<%= url %>" target="_blank" class="vk"></a>
+    <a href="http://twitter.com/home?status=<%= url %>" target="_blank" class="twitter"></a>
     <a href="#sb" class="mail"></a>
-    <a href="#" class="gplus"></a>
-    <a href="#" class="odnoklassniki"></a>
-    <a href="#" class="mailru"></a>
-  <section class="na-mail" name="mail_mess" >
-        <div class="na-inner">
-          <header>Отправить письмо</header>
-         
-          <form accept-charset="UTF-8" action="/receive_requests" class="form3" data-remote="true" id="new_audit_request" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="+zW8/jSNwsRvDZezBI10WjSJcLe2VyEhETfEz39arWU="></div>
-            <table>
-              <tbody><tr>
-                <td>
-		              <input id="audit_request_url" name="audit_request[url]" placeholder="Ф.И.О." size="30" type="text">
-                </td>
-                <td rowspan="3">
-		              <textarea cols="40" id="audit_request_additionally" name="audit_request[additionally]" placeholder="Сообщение" rows="20"></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td>
-		              <input id="audit_request_email" name="audit_request[email]" placeholder="E-mail" size="30" type="email">
-		            </td>
-              </tr>
-              <tr>
-                <td>
-            		  <input id="audit_request_phone" name="audit_request[phone]" placeholder="Телефон" size="30" type="text">
-            		</td>
-              </tr>
-              <tr>
-                <td colspan="2"><button class="button3">Готово</button></td>
-              </tr>
-            </tbody></table>
-</form>	<div class="form_message message3">Благодарим за то, что связались с нами</div>
-        </div>
-      </section>
-
+    <a href="https://plus.google.com/share?url=<%= url %>" target="_blank" class="gplus"></a>
+    <a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=<%= url %>" target="_blank" class="odnoklassniki"></a>
+    <a href="http://connect.mail.ru/share?share_url=<%= url %>" target="_blank" class="mailru"></a>
+    <section class="na-mail" name="mail_mess" >
+      <div class="na-inner">
+	<header>Отправить письмо</header>
+	<%= form_for Message.new, :url => '/receive_message', :remote => true, :validate => true, :html => {:class => 'form3'} do |f| %>
+	<table>
+	  <tbody>
+	    <tr>
+	      <td>
+		<%= f.text_field :name, placeholder: 'Ф.И.О.', size: 30, tabindex: 1 %>
+	      </td>
+	      <td rowspan="3">
+		<%= f.text_area :text, placeholder: 'Сообщение', tabindex: 4 %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :email, placeholder: 'E-mail', tabindex: 2 %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%= f.text_field :phone, placeholder: 'Телефон', tabindex: 3 %>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td colspan="2"><button class="button3">Готово</button></td>
+	    </tr>
+	  </tbody>
+	</table>
+<% end %>
+<div class="form_message message3">Благодарим за то, что связались с нами</div>
+</div>
+</section>
 </nav>
-	
+<section class="na-payment" name="_pay">
+  <header>Мы принимаем</header>
+  <div class="na-list">
+    <a href="/payments" class="qiwi"></a>
+    <a href="/payments" class="webmoney"></a>
+    <a href="/payments" class="yandex-money"></a>
+    <a href="/payments" class="sberbank" name="whywhy"></a>
+  </div>
+</section>
+<section class="na-contacts">
+  <header>Контакты</header>
+  <div class="clearfix"></div>
+  <div class="left">
+    ул . Декабристов д. 6
+  </div>
+  <div class="na-right">
+    +7 925 <span>27 66 651</span>
+    <br>
+    <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
+  </div>
+</section>
 
-
-  <section class="na-payment" name="_pay">
-    <header>Мы принимаем</header>
-    <div class="na-list">
-      <a href="#" class="qiwi"></a>
-      <a href="#" class="webmoney"></a>
-      <a href="#" class="yandex-money"></a>
-      <a href="#" class="sberbank" name="sb"></a>
-
-    </div>
-  </section>
-  <section class="na-contacts">
-    <header>Контакты</header>
-    <div class="clearfix"></div>
-    <div class="left">
-      ул . Декабристов д. 6
-    </div>
-    <div class="na-right">
-      +7 925 <span>27 66 651</span>
-      <br>
-      <a href="mailto:hello@napolnenie-web.ru">hello@napolnenie-web.ru</a>
-    </div>
-  </section>
 </footer>

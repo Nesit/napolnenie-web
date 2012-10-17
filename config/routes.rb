@@ -14,6 +14,7 @@ NapolnenieWeb::Application.routes.draw do
 
   match "/reviews" => "reviews#show"
   match "/receive_requests" => "receive_requests#receive", via: :post
+  match "/receive_message" => "receive_requests#receive_message", via: :post
   match "/:permalink" => "static_pages#show"
   root :to => 'main#index'
 end

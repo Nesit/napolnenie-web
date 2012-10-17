@@ -1,22 +1,6 @@
 <div class="na-non-scrollable-bg"></div>
 
-<section id="slider">
-  <div class="na-slider">
-    <div class="na-slider-bg">
-      <img src="/assets/loader-1.png" alt="">
-      <img src="/assets/loader-2.png" alt="">
-      <img src="/assets/loader-3.png" alt="">
-    </div>
-    <div class="na-slider-prev"></div>
-    <div class="na-slider-next"></div>
-    <div class="na-inner">
-      <% @page.banners.each do |banner| %>
-        <%= image_tag(banner.image.url(:medium)) %>
-      <% end %>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-</section>
+<%= render 'shared/page_slider', page: @page %>
 
 <div class="na-static-page">
   <%== @page.text1 %>
