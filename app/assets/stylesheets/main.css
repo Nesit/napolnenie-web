@@ -273,7 +273,7 @@ body > header
 	 left: 0px;
 	 padding: 10px;
 	 font: 18px Elektra Light Pro; 
-	 background: url (text_bg.png);
+	 background: url(/assets/text_bg.png);
 
 	}
 	.na-slider .slider_text h2
