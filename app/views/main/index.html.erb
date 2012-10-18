@@ -99,25 +99,35 @@
     <div class="na-parallax front"></div>
     <nav>
 
+      
+
+     
       <% ServiceCategory.order('position ASC').each do |category| %>
-	<div class="na-item circle-<%= category.id %>">
-	  <span><%= category.title %></span>
-	  <div class="na-hint"><%== category.description %></div>
-	  <% category.our_services.each_with_index do |service,i| %>
+  <div class="na-item circle-<%= category.id %>">
+    <div class="hint_big">
+      <div class="na-hint">
+        <div class="hint_text"><%== category.description %></div>
+      </div>
+    </div>
+    <span><%= category.title %></span>
     
-	    <%= link_to service_path(service), class: "circle-#{i}" do %>
-              <span><%= service.title %></span>
-	    <% end %>
-	  <% end %>
-	</div>
+    <% category.our_services.each_with_index do |service,i| %>
+      <%= link_to service_path(service), class: "circle-#{i}" do %>
+        <span><%= service.title %></span>
+        <div class="na-hint_small"><div class="hint_text">бббббббббббббббббббб</div></div>
       <% end %>
+    <% end %>
+  </div>
+<% end %>
 
       <a href="/press_releases" class="na-item press">
 	<span>Пресс-релизы</span>
-	<div class="na-hint">
-	  <div class="text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
+    <div class="hint_big">
+	   <div class="na-hint">
+	  <div class="hint_text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
 	  </div>
-	</div>
+	 </div>
+  </div>
       </a>
     </nav>
 
@@ -250,6 +260,7 @@
   <header>Контакты</header>
   <div class="clearfix"></div>
   <div class="left">
+    г. Москва</br>
     ул . Декабристов д. 6
   </div>
   <div class="na-right">
