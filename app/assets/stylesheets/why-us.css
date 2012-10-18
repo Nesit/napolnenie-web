@@ -142,12 +142,12 @@
 
 	     .na-mail 
         {          
-          background-color: #DC564E;
-	         display:none;
-          left: 0;
-          z-index: 2;
-          width: 100%;
-          height: 380px;
+         background-color: #DC564E;
+	       display:none;
+         left: 0;
+         z-index: 2;
+         width: 100%;
+         height: 380px;
 	       font-size: 150%;
         }
 
@@ -163,15 +163,15 @@
 
 	     .na-mail .na-inner > header
           {
-            font: normal 140% 'Elektra Light Pro Bold';
-            text-shadow: 0 1px 2px #333;
-	         border: none;
-	     background: none;
-	     border-radius: 0px; 
-	     box-shadow: none;
-	     color: #fff;
-	     margin-top: 35px;
-	     padding: 0px;
+          font: normal 140% 'Elektra Light Pro Bold';
+          text-shadow: 0 1px 2px #333;
+	        border: none;
+	        background: none;
+	        border-radius: 0px; 
+	        box-shadow: none;
+	        color: #fff;
+	        margin-top: 35px;
+	        padding: 0px;
           }
 
           .na-mail .na-inner form label
