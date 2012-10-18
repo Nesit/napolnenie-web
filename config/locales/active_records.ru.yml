@@ -84,6 +84,7 @@ ru:
         service_category: Категория
         title: Название
         text: Текст
+        hint: Текст подсказки
       service_category:
         position: Позиция
         title: Название

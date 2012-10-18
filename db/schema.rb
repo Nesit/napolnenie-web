@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20121015073947) do
     t.integer  "service_category_id"
     t.string   "title"
     t.text     "text"
+    t.text     "hint"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end

@@ -17,6 +17,7 @@ ActiveAdmin.register OurService do
       f.input :service_category
       f.input :title
       f.input :text, as: :html_editor
+      f.input :hint, as: :html_editor
     end
     f.buttons
   end

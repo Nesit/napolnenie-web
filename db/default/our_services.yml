@@ -2,8 +2,10 @@ tovarnyh_poziciy:
   service_category_id: 2
   title: Товарных Позиций
   text: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  hint: "dasdsad"
 
 content_managment:
   service_category_id: 2
   title: Удаленный Контент-Менеджмент
   text: <%= Faker::HTMLIpsum.fancy_string(10, true) %>
+  hint: "bbbb"

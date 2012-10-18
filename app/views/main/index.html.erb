@@ -114,7 +114,7 @@
     <% category.our_services.each_with_index do |service,i| %>
       <%= link_to service_path(service), class: "circle-#{i}" do %>
         <span><%= service.title %></span>
-        <div class="na-hint_small"><div class="hint_text">бббббббббббббббббббб</div></div>
+        <div class="na-hint_small"><div class="hint_text"><%== service.hint %></div></div>
       <% end %>
     <% end %>
   </div>

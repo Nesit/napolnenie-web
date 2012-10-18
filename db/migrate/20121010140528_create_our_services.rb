@@ -3,7 +3,7 @@ class CreateOurServices < ActiveRecord::Migration
     create_table :our_services do |t|
       t.integer :service_category_id
       t.string :title
-      t.text :text
+      t.text :text, :hint
       t.timestamps
     end
   end
