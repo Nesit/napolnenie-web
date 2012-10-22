@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(:version => 20121015073947) do
 
   create_table "static_pages", :force => true do |t|
     t.string   "permalink"
+    t.string   "name"
     t.text     "text1"
     t.text     "title"
     t.text     "keywords",           :default => "", :null => false

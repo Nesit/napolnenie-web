@@ -8,7 +8,7 @@ class StaticPage < ActiveRecord::Base
   attr_accessor :banner, :banner_image
 
   attr_accessible :permalink, :text1, :banner, :banner_image,
-                  :title, :keywords, :description, :image
+                  :title, :keywords, :description, :image, :name
 
   def to_param
     permalink
