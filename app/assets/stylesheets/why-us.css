@@ -7,7 +7,8 @@
 }
   #why-us .na-text 
   {
-    margin-left: 25px;
+    text-align: justify;
+    margin-top: 30px;
     font: normal 140% 'Elektra Light Pro';
   }  
     #why-us .na-text  span 
