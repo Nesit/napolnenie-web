@@ -6,5 +6,4 @@
     <%== banner.text %>
   </div>
   <%= link_to 'Редактировать', edit_admin_banner_path(banner) %>
-  <%= link_to 'Удалить баннер', admin_banner_path(banner), method: :delete, remote: true, class: 'delete_banner', onclick: '$(this).parents("div:first").remove();' %>
 </div>
