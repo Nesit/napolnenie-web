@@ -4,5 +4,5 @@ class OurClient < ActiveRecord::Base
   has_attached_file :logo, styles: { thumb: "110x110!" },
                              path: ":rails_root/public/system/our_client/:attachment/:id/:style/:filename",
                              url: "/system/our_client/:attachment/:id/:style/:filename",
-                             default_style: :thumb, default_url: 'loading.gif'
+                             default_style: :thumb
 end

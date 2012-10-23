@@ -4,7 +4,8 @@ class StaticPage < ActiveRecord::Base
   has_attached_file :image, styles: { thumb: "200x200>" },
                             path: ":rails_root/public/system/static_pages/:attachment/:id/:style/:filename",
                             url: "/system/static_pages/:attachment/:id/:style/:filename",
-                            default_style: :thumb, default_url: 'loading.gif'
+                            default_style: :thumb
+
   attr_accessor :banner, :banner_image
 
   attr_accessible :permalink, :text1, :banner, :banner_image,
