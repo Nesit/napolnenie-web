@@ -1,3 +1,3 @@
-User-Agent: 
-Disallow: 
+User-Agent: * 
+Disallow: *
 Host: napolnenie-web.ru
