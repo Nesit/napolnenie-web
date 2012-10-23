@@ -60,6 +60,7 @@ hr {
 
 img {
   vertical-align: middle;
+  border-radius: 50px
 }
 
 fieldset {
@@ -282,7 +283,7 @@ body > header
 	{position: absolute; 
 	 bottom: 0px;
 	 left: 0px;
-	 padding: 10px;
+	 padding: 20px;
 	 font: 18px Elektra Light Pro;
    display: block;
 	}
