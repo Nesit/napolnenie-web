@@ -9,7 +9,7 @@ ActiveAdmin.register Banner do
       image_tag(resource.image.url) if resource.image.present?
     end
     column 'Страница' do |resource|
-      link_to resource.static_page.permalink, admin_static_page_path(resource)
+      resource.static_page.try(:title)
     end
     default_actions
   end
