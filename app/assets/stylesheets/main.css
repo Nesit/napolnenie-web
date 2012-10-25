@@ -60,8 +60,15 @@ hr {
 
 img {
   vertical-align: middle;
-  border-radius: 50px
 }
+
+.na-slide img 
+{
+  vertical-align: middle;
+  border-radius: 50px;
+  
+}
+
 
 fieldset {
   border: 0;
@@ -253,13 +260,13 @@ body > header
         {
           cursor: pointer;
           position: absolute;
-          top: 50%;
+          top: 40%;
           margin-top: -26px;
           width: 52px;
           height: 52px;
           background-repeat: no-repeat;
         }
-          .na-slider .na-slider-prev
+          /*.na-slider .na-slider-prev
           {
             left: -77px;
             background-image: url(/assets/slider-prev.png);
@@ -269,17 +276,62 @@ body > header
           {
             right: -77px;
             background-image: url(/assets/slider-next.png);
-          }
+          }*/
 
-          .na-slider .na-inner
+.na-slider .bx-wrapper a 
+{
+  cursor: pointer; 
+  position: absolute; 
+  top: 35%; 
+  width: 52px; 
+  height: 52px;
+  background: no-repeat;
+}
+
+.na-slider .bx-wrapper a.bx-prev
+{
+  left: -77px;
+  background: url(/assets/slider-prev.png);
+}
+
+.na-slider .bx-wrapper a.bx-next
+{
+  right: -77px;
+  background: url(/assets/slider-next.png);
+}
+
+          .na-inner
           {
             position: relative;
           }
-            .na-slider .na-inner > *
+            .na-inner > *
             {
               position: absolute;
             }
-	.na-slider .na-inner .slider_text
+
+.na-slide .slider_text
+{
+  position: relative; 
+   bottom: 150px;
+   left: 0px;
+   padding: 20px;
+   font: 18px Elektra Light Pro;
+   display: block;
+}
+
+.na-slide .slider_text h2
+{
+  color: #black;
+   font: bold 32px Elektra Light Pro;
+   line-height: 0px;
+  }
+
+.na-slide .slider_text p
+{
+  color: #black;
+}
+
+	/*.na-inner .slider_text
 	{position: absolute; 
 	 bottom: 0px;
 	 left: 0px;
@@ -288,17 +340,15 @@ body > header
    display: block;
 	}
   
-	.na-slider .na-inner .slider_text h2
+	.na-inner .slider_text h2
 	{color: #black;
 	 font: bold 32px Elektra Light Pro;
 	 line-height: 0px;
 	}
 
-	.na-slider .na-inner .slider_text p
+	.na-inner .slider_text p
 	{color: #black;
-	 
-
-	}
+	}*/
 
 .na-non-scrollable-bg
 {
