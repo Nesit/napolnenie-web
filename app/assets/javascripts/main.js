@@ -47,7 +47,7 @@
 		   $("html, body").animate({ scrollTop: $(url).offset().top }, "slow")
 	       })
 
-    $('.na-slider .na-slider-next')
+ /* $('.na-slider .na-slider-next')
 	.click(function()
 	       {
 		   var inner = $(this).siblings('.na-inner')
@@ -66,8 +66,10 @@
 		   ,   first = inner.children(':last')
 
 		   last.appendTo(inner).fadeIn('fast')
-		   first.fadeOut('fast')
-	       })
+		   first.fadeOut('slow')
+	       })*/
+
+	$('#na-inner').bxSlider();
 
     $('#why-us .na-forms .na-button[data-to]')
 	.click(function()

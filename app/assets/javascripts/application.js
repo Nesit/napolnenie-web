@@ -18,4 +18,4 @@
 //= require smoothscroll
 //= require style-select
 //= require timeline.js.coffee
-
+//= require jquery.bxSlider.min
