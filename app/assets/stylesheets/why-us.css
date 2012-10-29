@@ -179,6 +179,7 @@
           {
             font: 12px 'Elektra Light Pro';
             display: block;
+            margin-left: 10px
           }
 	
 
@@ -193,6 +194,7 @@
           {
             font: normal 140% 'Elektra Light Pro Bold';
             text-shadow: 0 1px 2px #333;
+            top: -20px; 
           }
 
           #why-us .na-forms .na-form.na-audit .na-inner 
