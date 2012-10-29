@@ -306,7 +306,7 @@ body > header
           }
             .na-inner > *
             {
-              position: absolute;
+             /* position: absolute;*/
             }
 
 .na-slide .slider_text
