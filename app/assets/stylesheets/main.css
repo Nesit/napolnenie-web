@@ -272,6 +272,11 @@ body > header
             display: none;
           }
 
+          .na-slider .bx-wrapper
+        {
+          display: none;
+        }
+
         .na-slider .na-slider-prev,
         .na-slider .na-slider-next
         {
