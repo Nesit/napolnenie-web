@@ -22,6 +22,11 @@
       height: 110px;
       text-align: center;
     }
+
+     #clients .na-slider .na-inner .na-item:hover
+     {
+      opacity: 0.8
+     }
       #clients .na-slider .na-inner > div .na-item:nth-child(5n)
       {
         margin-right: 0;
@@ -37,7 +42,7 @@
         background-color: #fff;
         border: 1px solid #d3d3d3;
         border-radius: 55px;
-	cursor: pointer; 
+	      cursor: pointer; 
       }
 
 	#clients .na-slider .na-inner .na-item .na-hint
@@ -70,3 +75,5 @@
         vertical-align: middle;
         height: 110px;
       }
+
+    

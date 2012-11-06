@@ -94,7 +94,10 @@
       border-radius: 150px;
     }
 
-   
+   #service nav .na-item:hover
+   {
+    opacity: 0.8
+   }
 	
       #service nav .na-item:last-child 
       {
@@ -148,6 +151,8 @@
 	       left: 15px;
 	       top: 15px;     
 	    }
+
+      
 	#service nav .na-item.press .hint_big
             {
                position: absolute;

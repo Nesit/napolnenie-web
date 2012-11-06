@@ -78,6 +78,17 @@
       {
         background-image: url(/assets/form-order.png);
       }
+
+      #why-us .na-forms .na-button.na-order:hover
+      {
+        opacity: 0.8
+      }
+
+      #why-us .na-forms .na-button.na-audit:hover
+      {
+       opacity: 0.8
+      }
+
         #why-us .na-forms .na-button.na-order .na-hint
         {
           top: -70px;
@@ -309,13 +320,13 @@
                 #why-us .na-forms .na-form .na-inner form textarea
                 {
                   margin-left: 10px;
-                  height: 139px;
+                  max-height: 139px;
                 }
 
 		 .na-mail .na-inner form textarea
                 {
                   margin-left: 10px;
-                  height: 139px;
+                  max-height: 139px;
                 }
 
                 #why-us .na-forms .na-form.na-audit .na-inner form textarea
