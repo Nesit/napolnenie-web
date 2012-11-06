@@ -368,6 +368,7 @@
               {
                 overflow: hidden;
                 position: relative;
+                height: 37px
               }
                 #why-us .na-forms .na-form .na-inner form .na-custom-select select
                 {
@@ -395,4 +396,5 @@
                     position: absolute;
                     right: 7px;
                     content: "▼";
+                    line-height: 28px
                   }
