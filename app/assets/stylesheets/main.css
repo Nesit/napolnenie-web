@@ -274,7 +274,7 @@ body > header
 
           .na-slider .bx-wrapper
         {
-          display: none;
+          display: inline-block; 
         }
 
         .na-slider .na-slider-prev,
