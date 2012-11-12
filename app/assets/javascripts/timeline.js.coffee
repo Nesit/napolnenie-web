@@ -33,7 +33,7 @@ parse_reviews =(reviews) ->
     month = parseInt(review['month'])
     if $(".na-year#year_#{year}").length == 0
       add_year(year)
-    if $(".na-year#year_#{year}").find(".month div.na-item").size() == 0
+    if $(".na-year#year_#{year}").find("div.na-item.#{month}").size() == 0
       add_month(month, year)
     add_review(month, year, review)
 
