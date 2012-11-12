@@ -154,7 +154,7 @@
 						    else
 							$(this).delay(500*(i+1)).fadeIn('normal',function()
 											{
-											    first.delay(500).fadeIn('fast',function(){ bgs.fadeOut('fast') })
+											    bgs.delay(500).fadeOut('fast',function(){ first.fadeIn('fast') })
 											})
 						})
 					   }
