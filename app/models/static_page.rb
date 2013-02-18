@@ -11,6 +11,8 @@ class StaticPage < ActiveRecord::Base
   attr_accessible :permalink, :text1, :banner, :banner_image,
                   :title, :keywords, :description, :image, :name
 
+  validates :permalink, :text1, :name, :title, :keywords, :description, presence: true
+
   def to_param
     permalink
   end
