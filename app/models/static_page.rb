@@ -12,6 +12,7 @@ class StaticPage < ActiveRecord::Base
                   :title, :keywords, :description, :image, :name
 
   validates :permalink, :text1, :name, :title, :keywords, :description, presence: true
+  validates :permalink, :name, uniqueness: true
 
   def to_param
     permalink
