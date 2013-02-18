@@ -1,5 +1,7 @@
 <%= semantic_form_for [:admin, @static_page], html: { multipart: true } do |f| %>
   <%= f.inputs 'Основное' do %>
+    <%= f.input :name %>
+    <%= f.input :permalink %>
     <%= f.input :text1, as: :html_editor %>
   <% end %>
 
