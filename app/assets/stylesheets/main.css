@@ -14,7 +14,7 @@
 , button
 , input
 , select
-, textarea 
+, textarea
 {
   color: #222;
 }
@@ -30,7 +30,7 @@
   width: 975px
 }
 
-body 
+body
 {
   margin: 0;
   min-width: 1000px;
@@ -62,11 +62,11 @@ img {
   vertical-align: middle;
 }
 
-.na-slide img 
+.na-slide img
 {
   vertical-align: middle;
   border-radius: 50px;
-  
+
 }
 
 
@@ -115,7 +115,7 @@ textarea {
   font-style: normal;
 }
 
-body > header 
+body > header
 {
   position: fixed;
   z-index: 5;
@@ -124,9 +124,9 @@ body > header
   right: 0;
   height: 50px;
   background-color: rgba(255,255,255,.7);
-  border-bottom: 1px solid #eaeaea;  
+  border-bottom: 1px solid #eaeaea;
 }
-  #na-nav 
+  #na-nav
   {
     position: relative;
     margin: 0 auto;
@@ -136,7 +136,7 @@ body > header
     line-height: 50px;
     text-align: center;
   }
-    #na-nav a 
+    #na-nav a
     {
       margin: 0 5px;
       padding: 4px 25px;
@@ -161,7 +161,7 @@ body > header
         border-radius: 3px;
     }
 
-      #na-nav a.active 
+      #na-nav a.active
       {
         position: relative;
         background: #f8f8f8;
@@ -176,8 +176,8 @@ body > header
         border: 1px solid #d3d3d3;
         border-radius: 3px;
       }
-  
-  .na-shadow 
+
+  .na-shadow
   {
     overflow: hidden;
     margin: 0 auto;
@@ -197,12 +197,12 @@ body > header
       background: radial-gradient(ellipse at center,  rgba(200,200,200,1) 0%,rgba(255,255,255,0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#00ffffff',GradientType=1 );
     }
-    
+
     .na-logo-block
     {
       margin: 70px auto 0;
       padding-left: 25px;
-      width: 975px;  
+      width: 975px;
     }
       .na-logo-block .na-logo
       {
@@ -217,7 +217,7 @@ body > header
         text-align: right;
         font: normal 140% 'Elektra Light Pro Bold';
       }
-        .na-logo-block .na-contacts span 
+        .na-logo-block .na-contacts span
         {
           color: #d30b00;
         }
@@ -241,10 +241,10 @@ body > header
 {
   margin-top: 60px;
 }
-  #na-main > section 
+  #na-main > section
   {
   }
-    #na-main > section > header 
+    #na-main > section > header
     {
       margin-bottom: 5px;
       padding-top: 60px;
@@ -253,12 +253,12 @@ body > header
       color: #d65048;
       text-shadow: 0 1px 1px #333;
     }
-      .na-slider 
+      .na-slider
       {
         position: relative;
         height: 362px;
       }
-        .na-slider .na-slider-bg 
+        .na-slider .na-slider-bg
         {
           position: absolute;
           top: 0;
@@ -266,7 +266,7 @@ body > header
           bottom: 0;
           left: 0;
         }
-          .na-slider .na-slider-bg img 
+          .na-slider .na-slider-bg img
           {
             position: absolute;
             display: none;
@@ -274,7 +274,7 @@ body > header
 
           .na-slider .bx-wrapper
         {
-          display: inline-block; 
+          display: inline-block;
         }
 
         .na-slider .na-slider-prev,
@@ -300,12 +300,12 @@ body > header
             background-image: url(/assets/slider-next.png);
           }*/
 
-.na-slider .bx-wrapper a 
+.na-slider .bx-wrapper a
 {
-  cursor: pointer; 
-  position: absolute; 
-  top: 35%; 
-  width: 52px; 
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: 52px;
   height: 52px;
   background: no-repeat;
 }
@@ -331,9 +331,10 @@ body > header
              /* position: absolute;*/
             }
 
+
 .na-slide .slider_text
 {
-  position: relative; 
+  position: relative;
    bottom: 150px;
    left: 0px;
    padding: 20px;
@@ -354,14 +355,14 @@ body > header
 }
 
 	/*.na-inner .slider_text
-	{position: absolute; 
+	{position: absolute;
 	 bottom: 0px;
 	 left: 0px;
 	 padding: 20px;
 	 font: 18px Elektra Light Pro;
    display: block;
 	}
-  
+
 	.na-inner .slider_text h2
 	{color: #black;
 	 font: bold 32px Elektra Light Pro;
@@ -384,10 +385,10 @@ body > header
 }
 
 .na-static-page
-{  
-  margin: 30px auto 80px;  
+{
+  margin: 30px auto 80px;
   padding-left: 25px;
-  width: 975px;    
+  width: 975px;
   font: normal 140% 'Elektra Light Pro';
 }
   .na-static-page h1
@@ -396,10 +397,10 @@ body > header
       padding-top: 60px;
       font: normal 300% 'Elektra Light Pro Bold';
       color: #d65048;
-      text-shadow: 0 1px 1px #333;    
+      text-shadow: 0 1px 1px #333;
   }
 
-footer 
+footer
 {
   position: relative;
   text-align: center;
@@ -424,25 +425,25 @@ footer
       opacity: .6;
     }
 
-    footer .na-social .facebook 
+    footer .na-social .facebook
     {
       background-color: #00559e;
       background-image: url(/assets/facebook.png)
     }
 
-    footer .na-social .vk 
+    footer .na-social .vk
     {
       background-color: #5479a1;
       background-image: url(/assets/vk.png)
     }
 
-    footer .na-social .twitter 
+    footer .na-social .twitter
     {
       background-color: #00cbff;
       background-image: url(/assets/twitter.png)
     }
 
-    footer .na-social .mail 
+    footer .na-social .mail
     {
       background-color: #dc564e;
       background-image: url(/assets/mail.png)
@@ -454,13 +455,13 @@ footer
       background-image: url(/assets/gplus.png)
     }
 
-    footer .na-social .mailru 
+    footer .na-social .mailru
     {
       background-color: #004b88;
       background-image: url(/assets/mailru.png)
     }
 
-    footer .na-social .odnoklassniki 
+    footer .na-social .odnoklassniki
     {
       background-color: #e67d16;
       background-image: url(/assets/odnoklassniki.png)
@@ -499,7 +500,7 @@ footer
          -moz-transition: opacity 0.3s ease;
          -o-transition: opacity 0.3s ease;
         transition: opacity 0.3s ease;
-      }      
+      }
         footer .na-payment .na-list a:hover
         {
           opacity: .6;
@@ -544,19 +545,19 @@ footer
         {
           margin-left: 50%;
           text-align: right;
-        } 
+        }
           footer .na-contacts .na-right a
           {
             text-decoration: none;
             color: inherit;
           }
 
-          footer .na-contacts .na-right span 
+          footer .na-contacts .na-right span
           {
             color: #d30b00;
           }
 
-  #na-top 
+  #na-top
   {
     cursor: pointer;
     position: absolute;
@@ -573,11 +574,11 @@ footer
       background-position: bottom;
     }
 
-input::-webkit-input-placeholder, 
+input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder { color: #fff }
-input:-moz-placeholder, 
+input:-moz-placeholder,
 textarea:-moz-placeholder { color: #fff }
-input:-ms-input-placeholder, 
+input:-ms-input-placeholder,
 textarea:-ms-input-placeholder { color: #fff }
 
 

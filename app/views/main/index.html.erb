@@ -14,7 +14,8 @@
 	    <tr>
 	      <td>
 		<div class="na-custom-select">
-		  <%= f.select :our_service_id, options_from_collection_for_select(OurService.all, :id, :title) %>
+		  <%= f.select :our_service_id, options_from_collection_for_select(OurService.all, :id, :title), prompt:"Выберите услугу" %>
+      <span id="insert-select"></span>
 		</div>
 	      </td>
 	      <td rowspan="3">
@@ -99,9 +100,9 @@
     <div class="na-parallax front"></div>
     <nav>
 
-      
 
-     
+
+
       <% ServiceCategory.order('position ASC').each do |category| %>
   <div class="na-item circle-<%= category.id %>">
     <div class="hint_big">
@@ -110,25 +111,15 @@
       </div>
     </div>
     <span><%= category.title %></span>
-    
+
     <% category.our_services.each_with_index do |service,i| %>
       <%= link_to service_path(service), class: "circle-#{i}" do %>
         <span><%= service.title %></span>
-        <div class="na-hint_small"><div class="hint_text"><%== service.hint %></div></div>
       <% end %>
     <% end %>
   </div>
 <% end %>
 
-      <a href="/press_releases" class="na-item press">
-	<span>Пресс-релизы</span>
-    <div class="hint_big">
-	   <div class="na-hint">
-	  <div class="hint_text">комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем по определенным запросам пользователей
-	  </div>
-	 </div>
-  </div>
-      </a>
     </nav>
 
   </div>
@@ -190,10 +181,13 @@
   <div class="review_structure">
     <div class="na-item response new">
       <div>
-	<div class="na-inner">
-	  <div class="na-name"></div>
-	  <div class="na-company"></div>
-	  <div class="na-text"></div>
+  <div class="na-inner">
+  	<div class="na-contain">
+    	  <div class="na-name"></div>
+    	  <div class="na-company"></div>
+    	  <div class="na-text"></div>
+        <div class="na-bottom"></div>
+    </div>
 	</div>
       </div>
     </div>

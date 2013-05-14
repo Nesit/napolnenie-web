@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
     @description = page.description
     @image = page.image.url(:thumb, false)
   end
+
+  def set_seo_by_service(page)
+    @title = page.title
+    @keywords = page.keywords
+    @description = page.description
+  end
 end
