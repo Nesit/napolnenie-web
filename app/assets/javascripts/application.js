@@ -15,7 +15,6 @@
 //= require rails.validations
 //= require main
 //= require plugins
-//= require smoothscroll
 //= require style-select
 //= require timeline.js.coffee
 //= require jquery.bxSlider.min

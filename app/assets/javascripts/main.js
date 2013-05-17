@@ -1,11 +1,5 @@
 (function($){$(document).ready(function(){
 
-    $(window).scroll(function() {
-	if (($(window).scrollTop() > 500) && !($('#why-us .na-forms .na-button .popap').hasClass('shown'))) {
-	    $('#why-us .na-forms .na-button .popap').fadeIn(100).delay(1000).fadeOut(100);
-	    $('#why-us .na-forms .na-button .popap').addClass('shown');
-	}
-    });
 
     $('#new_service_request').submit(function() {
 	$('#why-us .na-forms .na-form .na-inner form.form1').hide();
