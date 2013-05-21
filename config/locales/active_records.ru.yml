@@ -75,16 +75,18 @@ ru:
         permalink: Адресс страницы
         text1: Главный текст
         title: Название страницы
-        keywords: Ключивые слова
+        keywords: Ключевые слова
         description: Описание
         image: Картинка для социальных сетей
         banner: Банер
         banner_image: Изображение
       our_service:
         service_category: Категория
-        title: Название
+        title: Название (title)
         text: Текст
         hint: Текст подсказки
+        keywords: Ключевые слова
+        description: Описание
       service_category:
         position: Позиция
         title: Название
@@ -111,4 +113,4 @@ ru:
         name: Имя
         phone: Телефон
         text: Текст
-        
+

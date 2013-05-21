@@ -18,7 +18,7 @@ ActiveAdmin.register Banner do
     f.inputs do
       f.input :static_page
       f.input :image, :as => :file, :hint => f.template.image_tag(f.object.image.url)
-      f.input :text
+      f.input :text, as: :html_editor
     end
     f.buttons
   end

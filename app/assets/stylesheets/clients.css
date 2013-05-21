@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
-  width: 975px; 
+  width: 975px;
 }
   #clients .na-slider .na-inner > div
   {
@@ -12,7 +12,7 @@
     bottom: 0;
     left: 0;
     text-align: center;
-  }  
+  }
     #clients .na-slider .na-inner .na-item
     {
       overflow: hidden;
@@ -32,17 +32,19 @@
         margin-right: 0;
       }
 
-      #clients .na-slider .na-inner .na-item span 
+      #clients .na-slider .na-inner .na-item span
       {
         overflow: hidden;
         display: inline-block;
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         width: 110px;
         height: 110px;
         background-color: #fff;
         border: 1px solid #d3d3d3;
         border-radius: 55px;
-	      cursor: pointer; 
+	      cursor: pointer;
       }
 
 	#clients .na-slider .na-inner .na-item .na-hint
@@ -51,6 +53,8 @@
         position: absolute;
         z-index: 1;
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         width: 111px;
         height: 108px;
         padding: 30px 15px 30px 15px;
@@ -76,4 +80,4 @@
         height: 110px;
       }
 
-    
+

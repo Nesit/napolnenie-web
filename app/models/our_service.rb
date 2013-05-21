@@ -5,5 +5,5 @@ class OurService < ActiveRecord::Base
 
   validates :service_category, :presence => true
 
-  attr_accessible :title, :text, :service_category_id, :hint
+  attr_accessible :title, :text, :service_category_id, :hint, :keywords, :description
 end

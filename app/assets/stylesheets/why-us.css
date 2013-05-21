@@ -3,19 +3,19 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
-  width: 975px;    
+  width: 975px;
 }
-  #why-us .na-text 
+  #why-us .na-text
   {
     text-align: justify;
     margin-top: 30px;
     font: normal 140% 'Elektra Light Pro';
-  }  
-    #why-us .na-text  span 
+  }
+    #why-us .na-text  span
     {
       color: #cc463f;
     }
-      #why-us .na-text  span span 
+      #why-us .na-text  span span
       {
         text-decoration: underline;
       }
@@ -34,12 +34,14 @@
       background-position: center center;
     }
 
-      #why-us .na-forms .na-button .na-hint 
+      #why-us .na-forms .na-button .na-hint
       {
         opacity: 0;
         position: absolute;
         z-index: 1;
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         width: 238px;
         height: 238px;
         text-align: center;
@@ -57,6 +59,8 @@
         position: absolute;
         z-index: 1;
         box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         width: 238px;
         height: 238px;
         text-align: center;
@@ -68,7 +72,7 @@
         transition: opacity 0.3s ease;
       }
 
-        #why-us .na-forms .na-buttons .na-button:hover .na-hint 
+        #why-us .na-forms .na-buttons .na-button:hover .na-hint
         {
           opacity: 1;
 	  display: block;
@@ -96,7 +100,7 @@
           padding-top: 100px;
           color: #1b98bb;
           background-image: url(/assets/hint-blue.png);
-	  font: 21px Elektra Light Pro; 
+	  font: 21px Elektra Light Pro;
         }
 
 	#why-us .na-forms .na-button.na-order .popap
@@ -106,14 +110,14 @@
           padding-top: 100px;
           color: #1b98bb;
           background-image: url(/assets/hint-blue.png);
-	  font: 21px Elektra Light Pro; 
+	  font: 21px Elektra Light Pro;
         }
 
 
       #why-us .na-forms .na-button.na-audit
       {
         background-image: url(/assets/form-audit.png);
-      }          
+      }
         #why-us .na-forms .na-button.na-audit .na-hint
         {
           top: -70px;
@@ -121,9 +125,9 @@
           padding-top: 90px;
           color: #aa1f27;
           background-image: url(/assets/hint-red.png);
-	  font: 21px Elektra Light Pro; 
+	  font: 21px Elektra Light Pro;
         }
-	
+
 	#why-us .na-forms .na-button.na-audit .popap
 	{
           top: -70px;
@@ -131,7 +135,7 @@
           padding-top: 90px;
           color: #aa1f27;
           background-image: url(/assets/hint-red.png);
-	  font: 21px Elektra Light Pro; 
+	  font: 21px Elektra Light Pro;
         }
 
       #why-us .na-forms .na-form
@@ -141,19 +145,19 @@
         z-index: 2;
         width: 100%;
         height: 380px;
-      }    
-        #why-us .na-forms .na-form.na-order 
-        {          
+      }
+        #why-us .na-forms .na-form.na-order
+        {
           background-color: #1b98bb;
         }
 
-        #why-us .na-forms .na-form.na-audit 
-        {          
+        #why-us .na-forms .na-form.na-audit
+        {
           background-color: #AA1F27;
         }
 
-	     .na-mail 
-        {          
+	     .na-mail
+        {
          background-color: #DC564E;
 	       display:none;
          left: 0;
@@ -179,7 +183,7 @@
           text-shadow: 0 1px 2px #333;
 	        border: none;
 	        background: none;
-	        border-radius: 0px; 
+	        border-radius: 0px;
 	        box-shadow: none;
 	        color: #fff;
 	        margin-top: 35px;
@@ -192,7 +196,7 @@
             display: block;
             margin-left: 10px;
           }
-	
+
 
         #why-us .na-forms .na-form .na-inner
         {
@@ -205,10 +209,10 @@
           {
             font: normal 140% 'Elektra Light Pro Bold';
             text-shadow: 0 1px 2px #333;
-            top: -20px; 
+            top: -20px;
           }
 
-          #why-us .na-forms .na-form.na-audit .na-inner 
+          #why-us .na-forms .na-form.na-audit .na-inner
           {
             text-align: right;
           }
@@ -239,51 +243,62 @@
 
         #why-us .form_message
 	{
-	font: 20px Arial; 
-	display: none;
-	color: #ddd;
-	line-height: 230px
-	} 
-
-	.na-mail .form_message
-	{
-	font: 20px Arial; 
+	font: 20px Arial;
 	display: none;
 	color: #ddd;
 	line-height: 230px
 	}
-  
-	#why-us .na-forms .na-form .na-inner form 
+
+	.na-mail .form_message
+	{
+	font: 20px Arial;
+	display: none;
+	color: #ddd;
+	line-height: 230px
+	}
+
+	#why-us .na-forms .na-form .na-inner form
           {
             margin-top: 30px;
             text-align: right;
           }
-            #why-us .na-forms .na-form .na-inner form td 
-            { 
+            #why-us .na-forms .na-form .na-inner form td
+            {
               vertical-align: top;
               padding: 0 10px 10px 0;
-              width: 250px; 
-            } 
-
-	.na-mail .na-inner form td 
-            { 
-              vertical-align: top;
-              padding: 0 10px 10px 0;
-              width: 250px; 
+              width: 250px;
             }
 
-             
+	.na-mail .na-inner form td
+            {
+              vertical-align: top;
+              padding: 0 10px 10px 0;
+              width: 250px;
+            }
+
+
+              #why-us .na-forms .na-form .na-inner form .na-custom-select
+              {
+                background: transparent url(/assets/input-bg.png) center center;
+                overflow: visible !important;
+              }
+              #why-us .na-forms .na-form .na-inner form .na-custom-select .message {
+                position:absolute; top:35px; right:0;
+              }
               #why-us .na-forms .na-form .na-inner form input,
               #why-us .na-forms .na-form .na-inner form textarea,
               #why-us .na-forms .na-form .na-inner form .na-custom-select span
               {
                 box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
                 width: 100%;
                 padding: 7px 7px 5px;
                 font: normal 90% 'Elektra Light Pro';
                 color: #fff;
                 background: transparent url(/assets/input-bg.png) center center;
                 border: 1px solid #fff;
+                overflow: hidden;
               }
 
               #why-us .na-forms .na-form .na-inner form label
@@ -297,6 +312,8 @@
               .na-mail .na-inner form .na-custom-select span
               {
                 box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
                 width: 100%;
                 padding: 7px 7px 5px;
                 font: normal 90% 'Elektra Light Pro';
@@ -331,7 +348,7 @@
 
                 #why-us .na-forms .na-form.na-audit .na-inner form textarea
                 {
-                 
+
                 }
 
               #why-us .na-forms .na-form .na-inner form button
@@ -355,7 +372,7 @@
                 border: none;
 		cursor: pointer;
               }
-	
+
               #why-us .na-forms .na-form .na-inner form button:hover
 		{color: #bbb
 		}
@@ -375,6 +392,8 @@
                   position: relative;
                   z-index: 10;
                   box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  -webkit-box-sizing: border-box;
                   display: block;
                   width: 250px;
                   height: 37px;
@@ -383,18 +402,15 @@
                 #why-us .na-forms .na-form .na-inner form .na-custom-select span
                 {
                   position: absolute;
-                  z-index: 1;     
+                  z-index: 1;
                   top: 0;
                   right: 0;
                   bottom: 0;
-                  left: 0;    
-                  text-align: left;  
-		  line-height: 1.5       
+                  left: 0;
+                  text-align: left;
+		  line-height: 1.5
                 }
-                  #why-us .na-forms .na-form .na-inner form .na-custom-select span:after
+                  #why-us .na-forms .na-form .na-inner form .na-custom-select span
                   {
-                    position: absolute;
-                    right: 7px;
-                    content: "▼";
-                    line-height: 28px
+                    background: transparent url(/assets/arrow-select.png) 226px center no-repeat;
                   }
