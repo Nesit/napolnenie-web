@@ -1,7 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'pg'
+gem 'mysql2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,11 +23,15 @@ gem 'will_paginate'
 gem 'exception_notification'
 
 group :development do
-  gem 'sqlite3'
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano-unicorn'
+  gem 'rvm-capistrano', github: 'wayneeseguin/rvm-capistrano'
+  gem 'capistrano-helpers'
+
   gem 'thin'
-  gem 'debugger'
   gem 'sextant'
-  gem 'debugger'
+  #gem 'debugger'
   gem 'quiet_assets'
   gem 'letter_opener'
 end

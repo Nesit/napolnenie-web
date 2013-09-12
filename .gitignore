@@ -22,3 +22,4 @@ pickle-email-*.html
 *.erb~
 /public/uploads
 /.rbenv-version
+/config/database.yml~
