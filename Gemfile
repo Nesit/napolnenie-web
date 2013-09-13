@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'mysql2'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -29,6 +29,7 @@ group :development do
   gem 'rvm-capistrano', github: 'wayneeseguin/rvm-capistrano'
   gem 'capistrano-helpers'
 
+  gem 'mysql2'
   gem 'thin'
   gem 'sextant'
   #gem 'debugger'
